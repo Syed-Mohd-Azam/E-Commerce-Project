@@ -1,7 +1,10 @@
+import AllRoutes from "./routes/AllRoutes";
 function App() {
   return (
     <>
-      <section></section>
+      <section>
+        <AllRoutes />
+      </section>
     </>
   );
 }
