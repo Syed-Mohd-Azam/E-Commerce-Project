@@ -23,10 +23,10 @@ export const Header = () => {
               </span>
             </a>
             <div className="flex items-center md:space-x-5 space-x-3 rtl:space-x-reverse ">
-              <GrSettingsOption className="md:w-5 md:h-5 h-4 w-4 dark:text-white" />
-              <IoSearch className="md:w-5 md:h-5 h-4 w-4 dark:text-white " />
-              <FaShoppingCart className="md:w-5 md:h-5 h-4 w-4 dark:text-white" />
-              <GoPerson className="md:w-5 md:h-5 h-4 w-4 dark:text-white" />
+              <GrSettingsOption className="md:w-5 md:h-5 h-4 w-4 dark:text-white cursor-pointer" />
+              <IoSearch className="md:w-5 md:h-5 h-4 w-4 dark:text-white cursor-pointer" />
+              <FaShoppingCart className="md:w-5 md:h-5 h-4 w-4 dark:text-white cursor-pointer" />
+              <GoPerson className="md:w-5 md:h-5 h-4 w-4 dark:text-white cursor-pointer" />
             </div>
           </div>
         </nav>
