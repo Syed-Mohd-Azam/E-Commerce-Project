@@ -19,7 +19,7 @@ export const Header = () => {
                 alt="Flowbite Logo"
               />
               <span className="self-center text-xl md:text-2xl font-semibold whitespace-nowrap dark:text-white">
-                Flowbite
+                CodeBook
               </span>
             </Link>
             <div className="flex items-center md:space-x-5 space-x-3 rtl:space-x-reverse ">
