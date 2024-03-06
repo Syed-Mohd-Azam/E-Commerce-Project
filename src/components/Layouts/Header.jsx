@@ -1,4 +1,8 @@
 import { Link } from "react-router-dom";
+import { GrSettingsOption } from "react-icons/gr";
+import { IoSearch } from "react-icons/io5";
+import { FaShoppingCart } from "react-icons/fa";
+import { GoPerson } from "react-icons/go";
 export const Header = () => {
   return (
     <>
@@ -18,7 +22,12 @@ export const Header = () => {
                 Flowbite
               </span>
             </a>
-            <div className="flex items-center space-x-6 rtl:space-x-reverse"></div>
+            <div className="flex items-center md:space-x-5 space-x-3 rtl:space-x-reverse ">
+              <GrSettingsOption className="md:w-5 md:h-5 h-4 w-4 dark:text-white" />
+              <IoSearch className="md:w-5 md:h-5 h-4 w-4 dark:text-white " />
+              <FaShoppingCart className="md:w-5 md:h-5 h-4 w-4 dark:text-white" />
+              <GoPerson className="md:w-5 md:h-5 h-4 w-4 dark:text-white" />
+            </div>
           </div>
         </nav>
       </header>
