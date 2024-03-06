@@ -6,7 +6,7 @@ import { GoPerson } from "react-icons/go";
 export const Header = () => {
   return (
     <>
-      <header>
+      <header className="shadow">
         <nav className="bg-white border-gray-200 dark:bg-blue-900">
           <div className="flex flex-wrap justify-between items-center mx-auto md:w-4/5 w-full p-4">
             <Link
