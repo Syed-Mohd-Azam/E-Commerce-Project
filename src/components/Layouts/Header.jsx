@@ -9,8 +9,8 @@ export const Header = () => {
       <header>
         <nav className="bg-white border-gray-200 dark:bg-gray-900">
           <div className="flex flex-wrap justify-between items-center mx-auto md:w-4/5 w-full p-4">
-            <a
-              href="https://flowbite.com"
+            <Link
+              to="/"
               className="flex items-center space-x-3 rtl:space-x-reverse"
             >
               <img
@@ -21,7 +21,7 @@ export const Header = () => {
               <span className="self-center text-xl md:text-2xl font-semibold whitespace-nowrap dark:text-white">
                 Flowbite
               </span>
-            </a>
+            </Link>
             <div className="flex items-center md:space-x-5 space-x-3 rtl:space-x-reverse ">
               <GrSettingsOption className="md:w-5 md:h-5 h-4 w-4 dark:text-white cursor-pointer" />
               <IoSearch className="md:w-5 md:h-5 h-4 w-4 dark:text-white cursor-pointer" />
