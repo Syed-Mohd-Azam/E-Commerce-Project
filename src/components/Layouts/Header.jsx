@@ -25,7 +25,12 @@ export const Header = () => {
             <div className="flex items-center md:space-x-5 space-x-3 rtl:space-x-reverse ">
               <GrSettingsOption className="md:w-6 md:h-6 h-4 w-4 dark:text-white cursor-pointer text-blue-900" />
               <IoSearch className="md:w-6 md:h-6 h-4 w-4 dark:text-white cursor-pointer text-blue-900" />
-              <FaShoppingCart className="md:w-6 md:h-6 h-4 w-4 dark:text-white cursor-pointer text-blue-900" />
+              <div className="flex flex-col relative">
+                <FaShoppingCart className="md:w-6 md:h-6 h-4 w-4 dark:text-white cursor-pointer text-blue-900" />
+                <span className="absolute -right-1 -top-3 bg-rose-700 text-white px-1 font-bold rounded-full text-xs">
+                  0
+                </span>
+              </div>
               <GoPerson className="md:w-6 md:h-6 h-4 w-4 dark:text-white cursor-pointer text-blue-900" />
             </div>
           </div>
