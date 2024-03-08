@@ -4,7 +4,7 @@ export const User = ({ user: { img, review, position, company, name } }) => {
   return (
     <>
       <section className="md:basis-2/5 p-4 w-10/12 border-2 rounded-lg ">
-        <blockquote className="italic font-normal lg:text-lg">
+        <blockquote className="italic font-normal lg:text-lg dark:text-gray-200">
           {"' "}
           {review}
           {" '"}
@@ -12,8 +12,8 @@ export const User = ({ user: { img, review, position, company, name } }) => {
         <article className="flex sm:flex-row flex-col lg:gap-10 gap-5 lg:py-8 py-2 px-5 ">
           <img src={img} alt="Image" className="w-24 h-24 rounded-full" />
           <article className="flex flex-col gap-2 ">
-            <p className="font-bold italic">{name}</p>
-            <p className="font-bold italic ">
+            <p className="font-bold italic dark:text-gray-200">{name}</p>
+            <p className="font-bold italic dark:text-gray-200">
               {position} at {company}
             </p>
           </article>
