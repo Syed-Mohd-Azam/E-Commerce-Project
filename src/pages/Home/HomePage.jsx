@@ -1,7 +1,10 @@
+import { Hero } from "./components/Hero";
 export const HomePage = () => {
   return (
     <>
-      <section>Home Page</section>
+      <section className="bg-white dark:bg-blue-900">
+        <Hero />
+      </section>
     </>
   );
 };
