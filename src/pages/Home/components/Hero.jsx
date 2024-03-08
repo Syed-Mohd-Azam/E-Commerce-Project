@@ -22,7 +22,7 @@ export const Hero = () => {
       </div>
       <div className="visual my-5 px-5 ">
         <img
-          className="rounded-lg w-full lg:min-w-[300px] lg:max-w-[800px] h-auto"
+          className="rounded-lg w-full lg:min-w-[300px] lg:max-w-[800px] max-h-full"
           src={HeroPicture}
           alt="CodeBook Hero Section"
         />
