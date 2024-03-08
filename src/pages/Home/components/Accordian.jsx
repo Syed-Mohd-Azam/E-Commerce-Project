@@ -23,7 +23,7 @@ export const Accordian = ({ question, answer, index, setIndex, id }) => {
           )}
         </article>
         {index && (
-          <article className="py-5 px-4 font-semibold italic text-md  lg:text-lg dark:text-blue-900">
+          <article className="py-5 px-4 font-normal italic text-md  lg:text-lg dark:text-blue-900">
             {answer}
           </article>
         )}
