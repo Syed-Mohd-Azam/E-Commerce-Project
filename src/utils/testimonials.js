@@ -20,7 +20,7 @@ export const users = [
     img: Boy2,
   },
   {
-    name: "Michael Schedtmann",
+    name: "Zayn Malik",
     review:
       "Codebook's extensive library and easy-to-navigate interface have made it my go-to platform for e-books. ",
     company: "Nimbus Insights Technologies",
@@ -28,7 +28,7 @@ export const users = [
     img: Boy3,
   },
   {
-    name: "Joseph Hayden",
+    name: "Tom Cruise",
     review:
       "I appreciate Codebook's commitment to providing a diverse range of e-books. ",
     company: "Pinnacle Nexus Technologies",
