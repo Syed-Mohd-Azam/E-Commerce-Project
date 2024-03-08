@@ -3,7 +3,7 @@ import { GrSettingsOption } from "react-icons/gr";
 import { IoSearch } from "react-icons/io5";
 import { FaShoppingCart } from "react-icons/fa";
 import { GoPerson } from "react-icons/go";
-import Logo from "../../../public/images/Logo.png";
+import Logo from "/images/Logo.png";
 export const Header = () => {
   return (
     <>

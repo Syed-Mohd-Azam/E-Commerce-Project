@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import HeroPicture from "../../../../public/images/Hero.avif";
+import HeroPicture from "/images/Hero.avif";
 export const Hero = () => {
   return (
     <section className="flex flex-col lg:flex-row items-center lg:justify-between w-full lg:w-4/5 mx-auto">
