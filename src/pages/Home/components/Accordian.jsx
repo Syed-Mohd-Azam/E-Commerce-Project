@@ -6,7 +6,7 @@ export const Accordian = ({ question, answer, index, setIndex, id }) => {
     <>
       <section className="py-5 px-4 bg-purple-50 mb-4 rounded-xl dark:bg-gray-300">
         <article className="flex justify-between">
-          <p className="font-semibold text-md lg:text-xl dark:text-blue-900">
+          <p className="font-semibold text-md lg:text-xl dark:text-blue-900 text-blue-900">
             {question}
           </p>
           {!index && (

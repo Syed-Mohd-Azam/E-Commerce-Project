@@ -7,7 +7,7 @@ export const Hero = () => {
         <h1 className="text-5xl font-bold dark:text-slate-100 text-blue-900">
           The Ultimate eBook Store
         </h1>
-        <p className="text-2xl my-7 px-1 dark:text-slate-300">
+        <p className="text-2xl my-7 px-1 dark:text-slate-300 text-blue-900">
           CodeBook is the world&apos;s most popular and authoritative source for
           computer science ebooks. Find ratings and access to the newest books
           digitally.
