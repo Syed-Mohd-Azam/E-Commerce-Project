@@ -12,7 +12,7 @@ export const users = [
     img: Boy1,
   },
   {
-    name: "Henry Wattson",
+    name: "Che Guevara",
     review:
       "Codebook has revolutionized my reading experience. The app is beautifully designed, making it a joy to browse and read e-books. ",
     company: "Aurora Horizon Enterprises",
