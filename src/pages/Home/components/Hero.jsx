@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import { HeroPicture } from "../../../../public/images/Hero.avif";
+import HeroPicture from "../../../../public/images/Hero.avif";
 export const Hero = () => {
   return (
     <section className="flex flex-col lg:flex-row items-center lg:justify-between">
-      <div className="my-5">
+      <div className="my-5 px-5">
         <h1 className="text-5xl font-bold dark:text-slate-100 ">
           The Ultimate eBook Store
         </h1>
@@ -20,9 +20,9 @@ export const Hero = () => {
           Explore eBooks
         </Link>
       </div>
-      <div className="visual my-5 ">
+      <div className="visual my-5 px-5 ">
         <img
-          className="rounded-lg w-[200px] h-auto"
+          className="rounded-lg w-full lg:max-w-[800px] h-auto"
           src={HeroPicture}
           alt="CodeBook Hero Section"
         />
