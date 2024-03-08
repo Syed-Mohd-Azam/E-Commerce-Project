@@ -3,6 +3,7 @@ import { GrSettingsOption } from "react-icons/gr";
 import { IoSearch } from "react-icons/io5";
 import { FaShoppingCart } from "react-icons/fa";
 import { GoPerson } from "react-icons/go";
+import Logo from "../../../public/images/Logo.png";
 export const Header = () => {
   return (
     <>
@@ -13,11 +14,7 @@ export const Header = () => {
               to="/"
               className="flex items-center space-x-3 rtl:space-x-reverse"
             >
-              <img
-                src="https://flowbite.com/docs/images/logo.svg"
-                className="md:h-8 h-5"
-                alt="Flowbite Logo"
-              />
+              <img src={Logo} className="md:h-8 h-5" alt="Flowbite Logo" />
               <span className="self-center text-blue-900  text-xl md:text-2xl font-bold whitespace-nowrap dark:text-gray-200">
                 CodeBook
               </span>
