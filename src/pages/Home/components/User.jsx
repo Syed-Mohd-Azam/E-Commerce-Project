@@ -4,7 +4,7 @@ export const User = ({ user: { img, review, position, company, name } }) => {
   return (
     <>
       <section className="md:basis-2/5 p-4 w-10/12 border-2 rounded-lg ">
-        <blockquote className="italic font-normal lg:text-lg dark:text-gray-200">
+        <blockquote className="italic font-normal lg:text-lg dark:text-gray-200 text-blue-900">
           {"' "}
           {review}
           {" '"}
