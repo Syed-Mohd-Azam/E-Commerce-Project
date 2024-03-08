@@ -6,22 +6,24 @@ export const Accordian = ({ question, answer, index, setIndex, id }) => {
     <>
       <section className="py-5 px-4 bg-purple-50 mb-4 rounded-xl dark:bg-gray-300">
         <article className="flex justify-between">
-          <p className="font-semibold text-xl dark:text-blue-900">{question}</p>
+          <p className="font-semibold text-md lg:text-xl dark:text-blue-900">
+            {question}
+          </p>
           {!index && (
             <IoIosArrowUp
               onClick={() => setIndex(id)}
-              className="hover:cursor-pointer dark:text-blue-900 font-bold w-6 h-6"
+              className="hover:cursor-pointer dark:text-blue-900 font-bold w-4 h-4 lg:w-6 lg:h-6 ml-3"
             />
           )}
           {index && (
             <IoIosArrowDown
               onClick={() => setIndex(0)}
-              className="hover:cursor-pointer dark:text-blue-900 font-bold w-6 h-6"
+              className="hover:cursor-pointer dark:text-blue-900 font-bold w-4 h-4 lg:w-6 lg:h-6 ml-3 "
             />
           )}
         </article>
         {index && (
-          <article className="py-5 px-4 font-semibold italic text-lg dark:text-blue-900">
+          <article className="py-5 px-4 font-semibold italic text-md  lg:text-lg dark:text-blue-900">
             {answer}
           </article>
         )}
