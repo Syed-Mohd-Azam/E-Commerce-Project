@@ -6,7 +6,7 @@ import { GoPerson } from "react-icons/go";
 export const Header = () => {
   return (
     <>
-      <header className="border-b-2  dark:border-gray-200 border-black">
+      <header className="border-b-2 border-gray-200">
         <nav className="bg-white border-gray-200  dark:bg-blue-900 ">
           <div className="flex flex-wrap justify-between items-center mx-auto md:w-4/5 w-full p-4">
             <Link
