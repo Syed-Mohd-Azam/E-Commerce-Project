@@ -4,7 +4,16 @@ import { IoSearch } from "react-icons/io5";
 import { FaShoppingCart } from "react-icons/fa";
 import { GoPerson } from "react-icons/go";
 import Logo from "/images/Logo.png";
+import { useState, useEffect } from "react";
 export const Header = () => {
+  const [dark, setDark] = useState(false);
+  useEffect(() => {
+    if (dark) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [dark]);
   return (
     <>
       <header className="border-b-2 border-gray-200">
@@ -20,7 +29,10 @@ export const Header = () => {
               </span>
             </Link>
             <div className="flex items-center md:space-x-5 space-x-3 rtl:space-x-reverse ">
-              <GrSettingsOption className="md:w-6 md:h-6 h-4 w-4 dark:text-gray-200 cursor-pointer text-blue-900" />
+              <GrSettingsOption
+                className="md:w-6 md:h-6 h-4 w-4 dark:text-gray-200 cursor-pointer text-blue-900"
+                onClick={() => setDark(!dark)}
+              />
               <IoSearch className="md:w-6 md:h-6 h-4 w-4 dark:text-gray-200 cursor-pointer text-blue-900" />
               <div className="flex flex-col relative">
                 <FaShoppingCart className="md:w-6 md:h-6 h-4 w-4 dark:text-gray-200 cursor-pointer text-blue-900" />
