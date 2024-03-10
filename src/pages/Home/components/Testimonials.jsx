@@ -9,9 +9,9 @@ const Testimonials = () => {
             Students about CodeBook !
           </h1>
           <article className="w-full flex flex-col gap-4 lg:flex-row lg:gap-x-16 lg:gap-y-8 flex-wrap items-center justify-center">
-            {users?.map((user, index) => (
+            {users?.map((user) => (
               <>
-                <User key={index} user={user} />
+                <User key={user?.id} user={user} />
               </>
             ))}
           </article>

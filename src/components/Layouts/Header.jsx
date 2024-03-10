@@ -4,9 +4,7 @@ import { IoSearch } from "react-icons/io5";
 import { FaShoppingCart } from "react-icons/fa";
 import { GoPerson } from "react-icons/go";
 import Logo from "/images/Logo.png";
-import { useSelector } from "react-redux";
 export const Header = () => {
-  useSelector((state) => console.log(state));
   return (
     <>
       <header className="border-b-2 border-gray-200">
