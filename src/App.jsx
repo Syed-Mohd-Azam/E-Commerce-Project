@@ -1,7 +1,7 @@
 import AllRoutes from "./routes/AllRoutes";
 import { Header, Footer } from "./components";
 import { Provider } from "react-redux";
-import { store } from "@reduxjs/toolkit";
+import { store } from "./utils/store";
 function App() {
   return (
     <>
