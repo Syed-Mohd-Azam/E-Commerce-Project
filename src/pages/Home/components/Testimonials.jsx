@@ -3,7 +3,7 @@ import { User } from "./User";
 const Testimonials = () => {
   return (
     <>
-      <section className="bg-white dark:bg-blue-900">
+      <section className="bg-white dark:bg-slate-800">
         <article className="w-full lg:w-3/4 mx-auto ">
           <h1 className="text-center text-2xl lg:text-3xl italic font-bold lg:py-20 py-8 px-2 dark:text-gray-200 text-blue-900">
             Students about CodeBook !

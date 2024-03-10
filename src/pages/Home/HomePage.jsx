@@ -4,7 +4,7 @@ import Testimonials from "./components/Testimonials";
 export const HomePage = () => {
   return (
     <>
-      <section className="bg-white dark:bg-blue-900 w-full ">
+      <section className="bg-white dark:bg-slate-800 w-full ">
         <Hero />
         <Testimonials />
         <FaqComponent />
