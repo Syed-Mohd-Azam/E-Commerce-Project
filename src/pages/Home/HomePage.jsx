@@ -6,8 +6,8 @@ export const HomePage = () => {
     <>
       <section className="bg-white dark:bg-blue-900 w-full ">
         <Hero />
-        {/* <Testimonials />
-        <FaqComponent /> */}
+        <Testimonials />
+        <FaqComponent />
       </section>
     </>
   );
