@@ -36,7 +36,7 @@ export const Header = () => {
               <IoSearch className="md:w-6 md:h-6 h-4 w-4 dark:text-gray-200 cursor-pointer text-blue-900" />
               <div className="flex flex-col relative">
                 <FaShoppingCart className="md:w-6 md:h-6 h-4 w-4 dark:text-gray-200 cursor-pointer text-blue-900" />
-                <span className="absolute -right-1 -top-3 bg-rose-700 text-gray-200 px-1 font-bold rounded-full text-xs">
+                <span className="absolute -right-3 -top-3 bg-red-400 text-white px-1 py-0 font-bold rounded-full text-xs">
                   0
                 </span>
               </div>
