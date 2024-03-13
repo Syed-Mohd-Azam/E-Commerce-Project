@@ -20,7 +20,7 @@ export const featured = [
     title: "Social Media Traffic Streams",
     img: SocialMedia,
     description:
-      "Social Media Traffic Streams provides a comprehensive guide to navigating the ever-evolving landscape of online platforms for effective audience engagement and growth.",
+      "Unlock the power of social media with 'Social Media Traffic Streams'—your ultimate guide to boosting online visibility and driving traffic.",
     price: "75$",
   },
 ];

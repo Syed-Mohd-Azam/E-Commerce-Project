@@ -6,7 +6,7 @@ export const ProductCard = ({
 }) => {
   return (
     <>
-      <section className=" h-auto  flex-1 rounded-xl relative">
+      <section className=" h-auto  flex-1 rounded-xl ">
         <article className=" w-full lg:h-2/5 h-[200px]">
           <img
             src={img}
@@ -34,7 +34,7 @@ export const ProductCard = ({
             <p className=" dark:bg-gray-200  font-bold py-2 px-5 rounded-md dark:text-blue-900 bg-blue-900 text-gray-200">
               Best Seller{" "}
             </p>
-            <article className="flex flex-row gap-2  ">
+            <article className="flex flex-row lg:gap-2 gap-[2px] ">
               <IoStar className="dark:text-gray-200 text-blue-900" />
               <IoStar className="dark:text-gray-200 text-blue-900" />
               <IoStar className="dark:text-gray-200 text-blue-900" />
