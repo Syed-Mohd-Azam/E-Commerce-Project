@@ -72,10 +72,29 @@ export const FilterBar = () => {
                 className="text-blue-900 dark:text-gray-200"
               >
                 {" "}
-                Best Seller Only
+                Best- Seller Only
               </label>
             </div>
-            <div></div>
+            <div className="flex flex-row justify-center items-center gap-4">
+              <input
+                type="checkbox"
+                id="in-stock"
+                name="in-stock-only"
+                value=""
+              />
+              <label
+                htmlFor="in-stock"
+                className="text-blue-900 dark:text-gray-200"
+              >
+                {" "}
+                IN- STOCK- Only
+              </label>
+            </div>
+          </article>
+          <article className="flex justify-center items-center py-4">
+            <button className="bg-blue-900 text-white p-2 rounded-lg dark:bg-gray-200 dark:text-slate-800 font-bold hover:scale-110">
+              Clear Filter
+            </button>
           </article>
         </article>
       </section>
