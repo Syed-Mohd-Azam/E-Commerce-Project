@@ -91,8 +91,8 @@ export const FilterBar = () => {
               </label>
             </div>
           </article>
-          <article className="flex justify-center items-center py-4">
-            <button className="bg-blue-900 text-white p-2 rounded-lg dark:bg-gray-200 dark:text-slate-800 font-bold hover:scale-110">
+          <article className="flex justify-center items-center py-8">
+            <button className="bg-blue-900 text-white py-2 px-4 rounded-lg dark:bg-gray-200 dark:text-slate-800 font-bold hover:scale-110">
               Clear Filter
             </button>
           </article>
