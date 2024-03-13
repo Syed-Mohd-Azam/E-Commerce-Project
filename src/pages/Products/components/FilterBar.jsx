@@ -1,5 +1,5 @@
 import { IoMdClose } from "react-icons/io";
-export const FilterBar = () => {
+export const FilterBar = ({ setShow }) => {
   return (
     <>
       <section className="h-screen fixed top-0 left-0 shadow w-[230px] z-10 bg-white dark:bg-slate-800 p-3">
@@ -7,7 +7,10 @@ export const FilterBar = () => {
           <p className=" text-blue-900 dark:text-gray-200 font-bold text-2xl italic">
             Filter
           </p>
-          <IoMdClose className="w-8 h-8 text-blue-900 dark:text-gray-200 hover:bg-gray-200 rounded-full p-1 hover:cursor-pointer dark:hover:bg-slate-500 " />
+          <IoMdClose
+            className="w-8 h-8 text-blue-900 dark:text-gray-200 hover:bg-gray-200 rounded-full p-1 hover:cursor-pointer dark:hover:bg-slate-500 "
+            onClick={() => setShow(false)}
+          />
         </article>
         <hr className="mt-2 text-blue-900 dark:text-gary-200" />
         <article className="py-4 text-blue-900 dark:text-gray-200">
