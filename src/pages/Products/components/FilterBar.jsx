@@ -62,7 +62,7 @@ export const FilterBar = () => {
             </label>
           </div>
           <article>
-            <p className="font-bold text-blue-900 dark:text-gray-200 px-4 py-4">
+            <p className="font-bold text-blue-900 dark:text-gray-200 px-4 py-4 text-lg">
               Other Filters
             </p>
             <div className="flex flex-row justify-center items-center gap-4">
