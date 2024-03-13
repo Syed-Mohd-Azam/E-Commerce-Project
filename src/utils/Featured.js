@@ -1,6 +1,6 @@
-import CopyRight from "../../public/images/Copywriting.webp";
+import CopyRight from "../../public/images/CopyWriting.png";
 import Motivation from "../../public/images/Motivation.jpg";
-import SocialMedia from "../../public/images/SocialMedia.webp";
+import SocialMedia from "../../public/images/SocialMedia.png";
 export const featured = [
   {
     title: "The Ultimate Copywriting Handbook",

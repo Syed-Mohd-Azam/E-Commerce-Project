@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import HeroPicture from "/images/Hero.avif";
 export const Hero = () => {
   return (
-    <section className="flex flex-col lg:flex-row items-center lg:justify-between w-full lg:w-4/5 mx-auto">
+    <section className="flex flex-col lg:flex-row items-center lg:justify-between w-full md:w-4/5 mx-auto">
       <div className="lg:my-28 px-5 mt-10 mb-5">
         <h1 className="text-5xl font-bold dark:text-slate-100 text-blue-900">
           The Ultimate eBook Store
