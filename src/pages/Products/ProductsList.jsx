@@ -8,7 +8,7 @@ export const ProductsList = () => {
       <section className="min-h-screen w-full">
         <section className="md:w-4/5 w-full p-4 mx-auto">
           <article className="flex flex-row justify-between items-center py-5">
-            <p className="text-blue-900 dark:text-gray-200 font-semibold text-lg italic">
+            <p className="text-blue-900 dark:text-gray-200 font-semibold text-2xl italic">
               All E-books (15)
             </p>
             <BsThreeDotsVertical
