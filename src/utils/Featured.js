@@ -1,13 +1,13 @@
-import CopyRight from "../../public/images/CopyWriting.png";
+import CopyRight from "../../public/images/CopyWriter.png";
 import Motivation from "../../public/images/Motivation.jpg";
 import SocialMedia from "../../public/images/SocialMedia.png";
 export const featured = [
   {
-    title: "The Ultimate Copywriting Handbook",
-    img: CopyRight,
+    title: "Social Media Traffic Streams",
+    img: SocialMedia,
     description:
-      "If you are like most Internet marketers, you would not hire a copywriter for most of your projects and for good reasons, too.",
-    price: "35$",
+      "Unlock the power of social media with 'Social Media Traffic Streams'—your ultimate guide to boosting online visibility and driving traffic.",
+    price: "75$",
   },
   {
     title: "The Psychology Of Motivation",
@@ -17,10 +17,10 @@ export const featured = [
     price: "46$",
   },
   {
-    title: "Social Media Traffic Streams",
-    img: SocialMedia,
+    title: "The Ultimate Copywriting Handbook",
+    img: CopyRight,
     description:
-      "Unlock the power of social media with 'Social Media Traffic Streams'—your ultimate guide to boosting online visibility and driving traffic.",
-    price: "75$",
+      "If you are like most Internet marketers, you would not hire a copywriter for most of your projects and for good reasons, too.",
+    price: "35$",
   },
 ];

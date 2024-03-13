@@ -7,7 +7,7 @@ export const FeaturedProducts = () => {
         <h1 className="lg:text-3xl italic text-blue-900 font-bold text-center lg:py-16 text-2xl py-7 dark:text-gray-200">
           Featured E-Books!
         </h1>
-        <article className="flex flex-col lg:flex-row gap-10 flex-wrap">
+        <article className="flex flex-col lg:flex-row gap-10 flex-wrap justify-center">
           {featured?.map((feature) => (
             <>
               <ProductCard feature={feature} />
