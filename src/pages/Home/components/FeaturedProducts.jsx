@@ -1,4 +1,5 @@
 import { ProductCard } from "./ProductCard";
+import { featured } from "../../../utils/Featured";
 export const FeaturedProducts = () => {
   return (
     <>
@@ -7,9 +8,11 @@ export const FeaturedProducts = () => {
           Featured E-Books!
         </h1>
         <article className="flex flex-row gap-5">
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
+          {featured?.map((feature) => (
+            <>
+              <ProductCard feature={feature} />
+            </>
+          ))}
         </article>
       </section>
     </>
