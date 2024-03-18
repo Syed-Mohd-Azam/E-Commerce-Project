@@ -35,7 +35,7 @@ CodeBook is a sophisticated e-commerce platform designed to cater specifically t
 ### Performance Optimization
 
 - The application is optimized for performance, incorporating techniques such as lazy loading, code splitting, and other best practices to reduce loading times and enhance user experience.
-### Community Engagement:
+### Community Engagement
 
 - CodeBook encourages user feedback and community engagement to continually improve the platform. Regular updates and responsiveness to user suggestions contribute to a dynamic and user-friendly e-book store.
 ### 🚀Project Link
