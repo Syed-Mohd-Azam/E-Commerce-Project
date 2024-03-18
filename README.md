@@ -32,7 +32,7 @@ CodeBook is a sophisticated e-commerce platform designed to cater specifically t
 ### Security Measures
 
 - Stringent security measures are in place to safeguard user information, ensuring the confidentiality and integrity of sensitive data.
-### Performance Optimization:
+### Performance Optimization
 
 - The application is optimized for performance, incorporating techniques such as lazy loading, code splitting, and other best practices to reduce loading times and enhance user experience.
 ### Community Engagement:
