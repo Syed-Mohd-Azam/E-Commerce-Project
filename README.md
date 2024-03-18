@@ -29,7 +29,7 @@ CodeBook is a sophisticated e-commerce platform designed to cater specifically t
 ### Documentation
 
 - CodeBook is well-documented, providing clear and concise information about the codebase, APIs, and any necessary configurations. This documentation facilitates maintenance and collaboration among developers.
-### Security Measures:
+### Security Measures
 
 - Stringent security measures are in place to safeguard user information, ensuring the confidentiality and integrity of sensitive data.
 ### Performance Optimization:
