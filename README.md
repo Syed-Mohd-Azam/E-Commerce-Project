@@ -17,7 +17,7 @@ CodeBook is a sophisticated e-commerce platform designed to cater specifically t
 
 - A secure and reliable payment gateway is seamlessly integrated, allowing users to make purchases with confidence.
 - The payment process is streamlined to provide a smooth checkout experience for customers.
-### Vite Development Server:
+### Vite Development Server
 
 - Leveraging the Vite development server, CodeBook ensures a rapid development experience, optimizing both development and production builds for enhanced performance.
 ### Scalable Architecture:
