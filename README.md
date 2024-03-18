@@ -20,13 +20,13 @@ CodeBook is a sophisticated e-commerce platform designed to cater specifically t
 ### Vite Development Server
 
 - Leveraging the Vite development server, CodeBook ensures a rapid development experience, optimizing both development and production builds for enhanced performance.
-### Scalable Architecture:
+### Scalable Architecture
 
 - The project is designed with scalability in mind, allowing for future expansion and handling increased traffic as the e-book store grows.
-### Testing:
+### Testing
 
 - Comprehensive testing is implemented, covering unit tests, integration tests, and end-to-end tests to ensure the robustness and reliability of the application.
-### Documentation:
+### Documentation
 
 - CodeBook is well-documented, providing clear and concise information about the codebase, APIs, and any necessary configurations. This documentation facilitates maintenance and collaboration among developers.
 ### Security Measures:
