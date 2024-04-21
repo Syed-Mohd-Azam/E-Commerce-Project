@@ -7,14 +7,14 @@ export const ProductCard = ({
   return (
     <>
       <section className=" h-auto w-4/5 lg:w-[300px]  rounded-xl ">
-        <article className=" w-full lg:h-2/5 h-[200px]">
+        <article className=" w-full  h-[200px]">
           <img
             src={image_local}
             alt="Book-Image"
             className="w-full h-full dark:text-gray-200 rounded-t-xl"
           />
         </article>
-        <article className="h-3/5 py-1 px-2">
+        <article className="h-auto py-1 px-2">
           <p className="text-lg font-bold italic py-3 text-blue-900 dark:text-gray-200">
             {name}
           </p>
