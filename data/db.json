@@ -221,7 +221,7 @@
       "rating": 5,
       "in_stock": true,
       "size": 10,
-      "best_seller": false
+      "best_seller": true
     },
     {
       "id": 3,
