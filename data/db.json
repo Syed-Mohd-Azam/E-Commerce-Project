@@ -215,7 +215,7 @@
       "name": "The Ultimate Copywriting Handbook",
       "overview": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error unde quisquam magni vel eligendi nam.",
       "long_description": "If you are like most Internet marketers, you would not hire a copywriter for most of your projects and for good reasons, too.",
-      "price": 99,
+      "price": "99$",
       "poster": "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=650&q=40",
       "image_local": "/images/CopyWriter.png",
       "rating": 5,
