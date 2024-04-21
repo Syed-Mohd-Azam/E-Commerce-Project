@@ -1,4 +1,5 @@
 import { IoMdClose } from "react-icons/io";
+// eslint-disable-next-line react/prop-types
 export const FilterBar = ({ setShow }) => {
   return (
     <>

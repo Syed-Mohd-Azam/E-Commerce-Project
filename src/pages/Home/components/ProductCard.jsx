@@ -6,7 +6,7 @@ export const ProductCard = ({
 }) => {
   return (
     <>
-      <section className=" h-auto  flex-1 rounded-xl ">
+      <section className=" h-auto w-4/5 lg:w-[300px]  rounded-xl ">
         <article className=" w-full lg:h-2/5 h-[200px]">
           <img
             src={image_local}
