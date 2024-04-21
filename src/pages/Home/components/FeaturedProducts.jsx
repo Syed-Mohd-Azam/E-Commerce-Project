@@ -1,6 +1,16 @@
 import { ProductCard } from "./ProductCard";
-import { featured } from "../../../utils/Featured";
+import { useEffect, useState } from "react";
 export const FeaturedProducts = () => {
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    featuredProducts();
+  }, []);
+  const featuredProducts = async () => {
+    const response = await fetch("http://localhost:8000/featured_products");
+    const json = await response.json();
+    console.log(json);
+    setProducts(json);
+  };
   return (
     <>
       <section className="w-full md:w-4/5 mx-auto p-4 lg:p-0">
@@ -8,11 +18,12 @@ export const FeaturedProducts = () => {
           Featured E-Books!
         </h1>
         <article className="flex flex-col lg:flex-row gap-10 flex-wrap justify-center">
-          {featured?.map((feature) => (
-            <>
-              <ProductCard feature={feature} />
-            </>
-          ))}
+          {products.length > 0 &&
+            products?.map((product) => (
+              <>
+                <ProductCard key={product?.id} product={product} />
+              </>
+            ))}
         </article>
       </section>
     </>
