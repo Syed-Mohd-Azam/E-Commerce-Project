@@ -1,8 +1,8 @@
 // eslint-disable-next-line react/prop-types
-import { IoStar } from "react-icons/io5";
+import Rating from "./Rating";
 export const ProductCard = ({
   // eslint-disable-next-line react/prop-types
-  product: { best_seller, image_local, long_description, name, price },
+  product: { best_seller, image_local, long_description, name, price, rating },
 }) => {
   return (
     <>
@@ -37,11 +37,7 @@ export const ProductCard = ({
               </p>
             )}
             <article className="flex flex-row lg:gap-2 gap-[2px] ">
-              <IoStar className="dark:text-gray-200 text-blue-900" />
-              <IoStar className="dark:text-gray-200 text-blue-900" />
-              <IoStar className="dark:text-gray-200 text-blue-900" />
-              <IoStar className="dark:text-gray-200  text-blue-900" />
-              <IoStar className="dark:text-gray-200 text-blue-900" />
+              <Rating rating={rating} />
             </article>
           </article>
         </article>
