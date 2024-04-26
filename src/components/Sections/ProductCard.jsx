@@ -1,5 +1,5 @@
 // eslint-disable-next-line react/prop-types
-import Rating from "./Rating";
+import { Rating } from "./Rating";
 export const ProductCard = ({
   // eslint-disable-next-line react/prop-types
   product: { best_seller, image_local, long_description, name, price, rating },

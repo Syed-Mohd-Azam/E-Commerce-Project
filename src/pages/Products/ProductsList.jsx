@@ -1,7 +1,7 @@
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { FilterBar } from "./components/FilterBar";
 import { useEffect, useState } from "react";
-import { ProductCard } from "../Home/components/ProductCard";
+import { ProductCard } from "../../components";
 export const ProductsList = () => {
   const [show, setShow] = useState(false);
   const [products, setProducts] = useState([]);
