@@ -22,7 +22,7 @@ export const ProductDetails = () => {
   }
   return (
     <>
-      <section className="md:w-4/5 mx-auto p-5 flex-1 ">
+      <section className="md:w-4/5 mx-auto  flex-1 p-10 md:p-0">
         <h1 className="w-full text-center pb-8 pt-3 text-lg md:text-xl lg:text-3xl text-slate-800 italic font-semibold dark:text-gray-200">
           {productDetails?.name}
         </h1>
