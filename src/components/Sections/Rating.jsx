@@ -8,13 +8,16 @@ export const Rating = ({ rating }) => {
   }
   return (
     <>
-      {starRating?.map((star) =>
+      {starRating?.map((star, index) =>
         star ? (
           // eslint-disable-next-line react/jsx-key
-          <IoStar className="dark:text-gray-200 text-blue-900" />
+          <IoStar key={index} className="dark:text-gray-200 text-blue-900" />
         ) : (
           // eslint-disable-next-line react/jsx-key
-          <IoStarOutline className="dark:text-gray-200 text-blue-900" />
+          <IoStarOutline
+            key={index}
+            className="dark:text-gray-200 text-blue-900"
+          />
         )
       )}
     </>

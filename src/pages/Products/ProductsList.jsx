@@ -2,6 +2,7 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 import { FilterBar } from "./components/FilterBar";
 import { useEffect, useState } from "react";
 import { ProductCard } from "../../components";
+import { Link } from "react-router-dom";
 export const ProductsList = () => {
   const [show, setShow] = useState(false);
   const [products, setProducts] = useState([]);
@@ -31,7 +32,9 @@ export const ProductsList = () => {
         <section className=" md:w-4/5 w-full p-4 mx-auto flex flex-col lg:flex-row gap-10 flex-wrap justify-center items-center lg:items-start">
           {products.length > 0 &&
             products.map((product) => (
-              <ProductCard key={product?.id} product={product} />
+              <Link to={`/productDetails/${product?.id}`} key={product?.id}>
+                <ProductCard product={product} />
+              </Link>
             ))}
         </section>
       </section>
