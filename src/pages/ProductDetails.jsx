@@ -22,8 +22,8 @@ export const ProductDetails = () => {
   }
   return (
     <>
-      <section className="md:w-4/5 mx-auto p-5 flex-1">
-        <h1 className="w-full text-center pb-8 pt-3 text-3xl text-slate-800 italic font-semibold">
+      <section className="md:w-4/5 mx-auto p-5 flex-1 ">
+        <h1 className="w-full text-center pb-8 pt-3 text-3xl text-slate-800 italic font-semibold dark:text-gray-200">
           {productDetails?.name}
         </h1>
         <section className=" flex flex-col lg:flex-row gap-10">
@@ -33,7 +33,7 @@ export const ProductDetails = () => {
             className="md:h-72 "
           />
           <article>
-            <p className="pb-4 text-3xl text-slate-900 font-semibold">
+            <p className="pb-4 text-3xl text-slate-900 font-semibold dark:text-gray-200">
               {productDetails?.price}
             </p>
             <Rating rating={productDetails?.rating} />
@@ -43,11 +43,11 @@ export const ProductDetails = () => {
               <button></button>
             </article>
             <article>
-              <button className="bg-blue-700 rounded-md px-3 py-2 text-white hover:scale-110 text-lg">
+              <button className="bg-blue-700 rounded-md px-3 py-2 text-white hover:scale-110 text-lg dark:text-gray-200 font-semibold">
                 Add to Cart +
               </button>
             </article>
-            <article className="text-xl text-slate-800 italic py-4 font-normal text-justify">
+            <article className="text-xl text-slate-800 italic py-4 font-normal text-justify dark:text-gray-200">
               {productDetails?.long_description}
             </article>
           </article>
