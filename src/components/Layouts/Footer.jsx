@@ -17,7 +17,7 @@ export const Footer = () => {
               >
                 <FaLinkedin className="w-4 h-4 sm:w-6 sm:h-6 text-blue-900 dark:text-gray-200" />
               </Link>
-              <Link to="https://github.com/Syed-Mohd-Azam" target="_blank">
+              <Link to="https://github.com/azamsyedmohd" target="_blank">
                 <FaGithub className="w-4 h-4 sm:w-6 sm:h-6 text-blue-900 dark:text-gray-200" />
               </Link>
             </div>
