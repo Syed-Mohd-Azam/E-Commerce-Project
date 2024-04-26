@@ -5,7 +5,7 @@ export const Footer = () => {
   return (
     <>
       <footer className="border-t-2 border-gray-200">
-        <footer className="bg-white shadow-none dark:bg-inherit">
+        <footer className="bg-white shadow-none dark:bg-black">
           <div className=" mx-auto md:w-4/5 w-full flex items-center justify-between p-3">
             <p className="text-sm sm:text-lg text-blue-900 font-bold  dark:text-gray-200 italic text-center">
               © 2024 & All Rights Reserved.
