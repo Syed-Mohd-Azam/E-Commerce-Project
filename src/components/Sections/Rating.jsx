@@ -8,18 +8,20 @@ export const Rating = ({ rating }) => {
   }
   return (
     <>
-      {starRating?.map((star, index) =>
-        star ? (
-          // eslint-disable-next-line react/jsx-key
-          <IoStar key={index} className="dark:text-gray-200 text-blue-900" />
-        ) : (
-          // eslint-disable-next-line react/jsx-key
-          <IoStarOutline
-            key={index}
-            className="dark:text-gray-200 text-blue-900"
-          />
-        )
-      )}
+      <article className="flex flex-row gap-2">
+        {starRating?.map((star, index) =>
+          star ? (
+            // eslint-disable-next-line react/jsx-key
+            <IoStar key={index} className="dark:text-gray-200 text-blue-900" />
+          ) : (
+            // eslint-disable-next-line react/jsx-key
+            <IoStarOutline
+              key={index}
+              className="dark:text-gray-200 text-blue-900"
+            />
+          )
+        )}
+      </article>
     </>
   );
 };

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Rating from "../components/Sections/Rating";
 
 export const ProductDetails = () => {
   const [productDetails, setProductDetails] = useState(null);
@@ -22,9 +23,34 @@ export const ProductDetails = () => {
   return (
     <>
       <section className="md:w-4/5 mx-auto p-5 flex-1">
-        <h1 className="w-full text-center ">Hi my name is Azam</h1>
-        <section className=" flex flex-col md:flex-row gap-10">
-          <img src="" alt="Book-Image" />
+        <h1 className="w-full text-center pb-8 pt-3 text-3xl text-slate-800 italic font-semibold">
+          {productDetails?.name}
+        </h1>
+        <section className=" flex flex-col lg:flex-row gap-10">
+          <img
+            src={productDetails?.poster}
+            alt="Book-Image"
+            className="md:h-72 "
+          />
+          <article>
+            <p className="pb-4 text-3xl text-slate-900 font-semibold">
+              {productDetails?.price}
+            </p>
+            <Rating rating={productDetails?.rating} />
+            <article>
+              <button></button>
+              <button></button>
+              <button></button>
+            </article>
+            <article>
+              <button className="bg-blue-700 rounded-md px-3 py-2 text-white hover:scale-110 text-lg">
+                Add to Cart +
+              </button>
+            </article>
+            <article className="text-xl text-slate-800 italic py-4 font-normal text-justify">
+              {productDetails?.long_description}
+            </article>
+          </article>
         </section>
       </section>
     </>
