@@ -5,6 +5,7 @@ import { FaShoppingCart } from "react-icons/fa";
 import { GoPerson } from "react-icons/go";
 import Logo from "/images/Logo.png";
 import { useState, useEffect } from "react";
+import { Search } from "../Sections/Search";
 export const Header = () => {
   const [dark, setDark] = useState(false);
   useEffect(() => {
@@ -16,8 +17,8 @@ export const Header = () => {
   }, [dark]);
   return (
     <>
-      <header className="border-b-2 border-gray-200">
-        <nav className="bg-white border-gray-200  dark:bg-black  ">
+      <header>
+        <nav className="bg-white   dark:bg-black  ">
           <div className="flex flex-wrap justify-between items-center mx-auto md:w-4/5 w-full p-4">
             <Link
               to="/"
@@ -44,6 +45,7 @@ export const Header = () => {
             </div>
           </div>
         </nav>
+        <Search />
       </header>
     </>
   );
