@@ -8,6 +8,7 @@ import { useState, useEffect } from "react";
 import { Search } from "../Sections/Search";
 export const Header = () => {
   const [dark, setDark] = useState(false);
+  const [showSearch, setShowSearch] = useState(false);
   useEffect(() => {
     if (dark) {
       document.documentElement.classList.add("dark");
@@ -34,7 +35,10 @@ export const Header = () => {
                 className="md:w-6 md:h-6 h-4 w-4 dark:text-gray-200 cursor-pointer text-blue-900"
                 onClick={() => setDark(!dark)}
               />
-              <IoSearch className="md:w-6 md:h-6 h-4 w-4 dark:text-gray-200 cursor-pointer text-blue-900" />
+              <IoSearch
+                className="md:w-6 md:h-6 h-4 w-4 dark:text-gray-200 cursor-pointer text-blue-900"
+                onClick={() => setShowSearch(!showSearch)}
+              />
               <div className="flex flex-col relative">
                 <FaShoppingCart className="md:w-6 md:h-6 h-4 w-4 dark:text-gray-200 cursor-pointer text-blue-900" />
                 <span className="absolute -right-3 -top-3 bg-red-400 text-white px-1 py-0 font-bold rounded-full text-xs">
@@ -45,7 +49,7 @@ export const Header = () => {
             </div>
           </div>
         </nav>
-        <Search />
+        {showSearch && <Search />}
       </header>
     </>
   );
