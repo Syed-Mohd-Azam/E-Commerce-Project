@@ -13,6 +13,7 @@ export const ProductDetails = () => {
   const fetchProductDetails = async () => {
     const productDetails = await fetch(`http://localhost:8000/products/${id}`);
     const details = await productDetails.json();
+    console.log(details);
     setProductDetails(details);
   };
   if (productDetails === null) {
@@ -34,16 +35,22 @@ export const ProductDetails = () => {
             alt="Book-Image"
             className="md:h-72 h-48"
           />
-          <article>
-            <p className="pb-4 text-md md:text-lg lg:text-3xl text-slate-900 font-semibold dark:text-gray-200">
+          <article className="flex flex-col gap-3">
+            <p className="pb-4 text-3xl text-slate-900 font-semibold dark:text-gray-200">
               {productDetails?.price}
             </p>
-            <Rating rating={productDetails?.rating} />
-            <article>
-              <button></button>
-              <button></button>
-              <button></button>
+            <article className="flex flex-row gap-3 mb-1">
+              <button className="bg-blue-700 text-gray-200 font-bold italic py-1 px-2 rounded-md dark:bg-gray-200 dark:text-blue-900 text-md md:text-lg ">
+                {productDetails?.best_seller ? "Best Seller" : null}
+              </button>
+              <button className="bg-blue-700 text-gray-200 font-bold italic py-1 px-2 rounded-md dark:bg-gray-200 dark:text-blue-700 text-md md:text-lg ">
+                {productDetails?.in_stock ? "In Stock" : "Out of Stock"}
+              </button>
+              <button className="bg-blue-700 text-gray-200 font-bold italic py-1 px-2 rounded-md dark:bg-gray-200 dark:text-blue-900 text-md md:text-lg">
+                {productDetails?.size}MB
+              </button>
             </article>
+            <Rating rating={productDetails?.rating} />
             <article>
               <button className="bg-blue-700 rounded-md px-3 py-2 text-white hover:scale-110 text-lg dark:text-gray-200 font-semibold">
                 Add to Cart +
