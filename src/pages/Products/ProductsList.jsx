@@ -3,10 +3,11 @@ import { FilterBar } from "./components/FilterBar";
 import { useEffect, useState } from "react";
 import { ProductCard } from "../../components";
 import { Link, useLocation } from "react-router-dom";
+import { useTitle } from "../../hooks/useTitle";
 export const ProductsList = () => {
   const [show, setShow] = useState(false);
   const [products, setProducts] = useState([]);
-
+  useTitle("E-Book Library");
   useEffect(() => {
     fetchProducts();
   }, []);
