@@ -1,5 +1,4 @@
-# 🧡CodeBook: Online E-Book Store🚀!!
-
+# 🧡CodeBook: Online E-Book Store🚀!
 ## Overview
 CodeBook is a sophisticated e-commerce platform designed to cater specifically to the digital book market. This online store provides a seamless and secure experience for users to explore, purchase, and enjoy a wide range of e-books. The project is built using React and Vite, taking advantage of modern web development technologies to deliver a fast and efficient user interface.
 
@@ -38,5 +37,5 @@ CodeBook is a sophisticated e-commerce platform designed to cater specifically t
 ### Community Engagement
 
 - CodeBook encourages user feedback and community engagement to continually improve the platform. Regular updates and responsiveness to user suggestions contribute to a dynamic and user-friendly e-book store.
-### 🚀Project Link
+### 🚀Project Link 🎉
 Project Link : https://extraordinary-belekoy-3bc1ec.netlify.app/
