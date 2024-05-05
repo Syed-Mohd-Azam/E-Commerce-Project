@@ -2,12 +2,15 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 import { FilterBar } from "./components/FilterBar";
 import { useEffect, useState } from "react";
 import { ProductCard } from "../../components";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useTitle } from "../../hooks/useTitle";
+import { useFilter } from "../../contexts";
 export const ProductsList = () => {
+  const x = useFilter();
   const [show, setShow] = useState(false);
   const [products, setProducts] = useState([]);
   useTitle("E-Book Library");
+  console.log("x", x);
   useEffect(() => {
     fetchProducts();
   }, []);

@@ -24,5 +24,6 @@ export const FilterProvider = ({ children }) => {
 export const useFilter = () => {
   console.log(FilterContext);
   const context = useContext(FilterContext);
+  console.log("context", context);
   return context;
 };
