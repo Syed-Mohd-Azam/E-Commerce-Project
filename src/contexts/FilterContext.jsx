@@ -21,8 +21,8 @@ export const FilterProvider = ({ children }) => {
   );
 };
 // eslint-disable-next-line react-refresh/only-export-components
-export const useFilter = () => {
-  console.log("FilterContext", FilterContext);
+export const useFilterContext = () => {
+  console.log("", FilterContext);
   const context = useContext(FilterContext);
   console.log("context", context);
   return context;

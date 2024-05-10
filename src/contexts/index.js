@@ -1,1 +1,1 @@
-export { FilterProvider, useFilter } from "./FilterContext";
+export { FilterProvider, useFilterContext } from "./FilterContext";
