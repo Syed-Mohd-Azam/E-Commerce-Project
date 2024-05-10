@@ -4,9 +4,9 @@ import { useEffect, useState } from "react";
 import { ProductCard } from "../../components";
 import { Link } from "react-router-dom";
 import { useTitle } from "../../hooks/useTitle";
-import { useFilter } from "../../contexts";
+import { useFilterContext } from "../../contexts";
 export const ProductsList = () => {
-  const x = useFilter();
+  const x = useFilterContext();
   const [show, setShow] = useState(false);
   const [products, setProducts] = useState([]);
   useTitle("E-Book Library");

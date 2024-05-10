@@ -1,9 +1,9 @@
-import { createContext, useContext } from "react";
-
+import { createContext, useContext, useReducer } from "react";
+import { FilterReducer } from "../reducers/FilterReducer";
 const filterInitialState = {
   productList: [],
   onlyInStock: false,
-  bestSelerOnly: false,
+  bestSellerOnly: false,
   sortBy: null,
   ratings: null,
 };
@@ -11,6 +11,7 @@ const filterInitialState = {
 const FilterContext = createContext(filterInitialState);
 // eslint-disable-next-line react/prop-types
 export const FilterProvider = ({ children }) => {
+  const [state, dispatch] = useReducer(FilterReducer, filterInitialState);
   const value = {
     productList: [1, 2, 3],
   };
@@ -22,7 +23,6 @@ export const FilterProvider = ({ children }) => {
 };
 // eslint-disable-next-line react-refresh/only-export-components
 export const useFilterContext = () => {
-  console.log("", FilterContext);
   const context = useContext(FilterContext);
   console.log("context", context);
   return context;
