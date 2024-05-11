@@ -12,12 +12,14 @@ const FilterContext = createContext(filterInitialState);
 // eslint-disable-next-line react/prop-types
 export const FilterProvider = ({ children }) => {
   const [state, dispatch] = useReducer(FilterReducer, filterInitialState);
-  console.log(state);
   function initialProductList(products) {
     dispatch({
       type: "PRODUCT_LIST",
       payload: products,
     });
+  }
+  function bestSeller(products) {
+    return products.filter((product) => product.best_seller === true);
   }
   const value = {
     productList: state?.productList,
@@ -32,6 +34,5 @@ export const FilterProvider = ({ children }) => {
 // eslint-disable-next-line react-refresh/only-export-components
 export const useFilterContext = () => {
   const context = useContext(FilterContext);
-  console.log("context", context);
   return context;
 };

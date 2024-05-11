@@ -7,7 +7,6 @@ import { useTitle } from "../../hooks/useTitle";
 import { useFilterContext } from "../../contexts";
 export const ProductsList = () => {
   const { initialProductList, productList } = useFilterContext();
-  console.log("productList", productList);
   const [show, setShow] = useState(false);
   useTitle("E-Book Library");
   useEffect(() => {
@@ -16,7 +15,7 @@ export const ProductsList = () => {
   const fetchProducts = async () => {
     const response = await fetch(`http://localhost:8000/products`);
     const json = await response.json();
-    console.log("json", json);
+    console.log(json);
     initialProductList(json);
   };
   return (
