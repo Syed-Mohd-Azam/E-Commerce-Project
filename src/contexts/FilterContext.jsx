@@ -56,6 +56,8 @@ export const FilterProvider = ({ children }) => {
     sortBy(onlyInStock(bestSeller(state?.productList)))
   );
   const value = {
+    state,
+    dispatch,
     productList: filteredProducts,
     initialProductList,
   };
