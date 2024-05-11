@@ -23,7 +23,11 @@ export const FilterProvider = ({ children }) => {
       ? products.filter((product) => product.best_seller === true)
       : products;
   }
-
+  function onlyInStock(products) {
+    return state?.onlyInStock
+      ? products?.filter((product) => product?.in_stock === true)
+      : products;
+  }
   const value = {
     productList: state?.productList,
     initialProductList,
