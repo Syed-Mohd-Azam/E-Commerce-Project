@@ -19,8 +19,11 @@ export const FilterProvider = ({ children }) => {
     });
   }
   function bestSeller(products) {
-    return products.filter((product) => product.best_seller === true);
+    return state?.bestSellerOnly
+      ? products.filter((product) => product.best_seller === true)
+      : products;
   }
+
   const value = {
     productList: state?.productList,
     initialProductList,
