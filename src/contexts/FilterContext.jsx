@@ -28,6 +28,30 @@ export const FilterProvider = ({ children }) => {
       ? products?.filter((product) => product?.in_stock === true)
       : products;
   }
+  function ratings(products) {
+    if (state.ratings === "4STARSABOVE") {
+      return products.filter((product) => product.rating > 4);
+    }
+    if (state.ratings === "3STARSABOVE") {
+      return products.filter((product) => product.rating > 3);
+    }
+    if (state.ratings === "2STARSABOVE") {
+      return products.filter((product) => product.rating > 2);
+    }
+    if (state.ratings === "1STARSABOVE") {
+      return products.filter((product) => product.rating > 1);
+    }
+    return products;
+  }
+  function sortBy(products) {
+    if (state.sortBy === "lowtohigh") {
+      return products.sort((a, b) => Number(a.price) - Number(b.price));
+    }
+    if (state.sortBy === "hightolow") {
+      return products.sort((a, b) => Number(b.price) - Number(a.price));
+    }
+    return products;
+  }
   const value = {
     productList: state?.productList,
     initialProductList,
