@@ -12,7 +12,6 @@ const FilterContext = createContext(filterInitialState);
 // eslint-disable-next-line react/prop-types
 export const FilterProvider = ({ children }) => {
   const [state, dispatch] = useReducer(FilterReducer, filterInitialState);
-  console.log("FilterProvider called");
   function initialProductList(products) {
     dispatch({
       type: "PRODUCT_LIST",
