@@ -24,7 +24,7 @@ export const ProductCard = ({
           <article className="flex flex-row gap-2"></article>
           <article className="flex justify-end items-center py-1">
             <p className="font-bold italic text-xl text-blue-900 dark;text-gray-200 dark:text-gray-200 px-5">
-              {price}
+              {price}$
             </p>
             {/* <button className="p-2 bg-blue-900 text-white dark:bg-gray-200 dark:text-blue-900 rounded-md italic font-bold">
               Add to cart

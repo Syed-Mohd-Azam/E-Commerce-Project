@@ -4,15 +4,21 @@ export const FilterReducer = (state, action) => {
     case "PRODUCT_LIST":
       return { ...state, productList: payload };
     case "SORT_BY":
-      return;
+      return { ...state, sortBy: payload.sortBy };
     case "RATINGS":
-      return;
+      return { ...state, ratings: payload.ratings };
     case "BEST_SELLER_ONLY":
-      return;
+      return { ...state, bestSellerOnly: payload.bestSellerOnly };
     case "ONLY_IN_STOCK":
-      return;
+      return { ...state, onlyInStock: payload.onlyInStock };
     case "CLEAR_FILTER":
-      return;
+      return {
+        ...state,
+        onlyInStock: false,
+        bestSellerOnly: false,
+        sortBy: null,
+        ratings: null,
+      };
     default:
       throw new Error("No Case Found");
   }
