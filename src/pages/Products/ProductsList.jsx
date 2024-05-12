@@ -15,7 +15,6 @@ export const ProductsList = () => {
   const fetchProducts = async () => {
     const response = await fetch(`http://localhost:8000/products`);
     const json = await response.json();
-    console.log(json);
     initialProductList(json);
   };
   return (
