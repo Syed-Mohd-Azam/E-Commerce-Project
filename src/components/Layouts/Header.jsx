@@ -7,10 +7,11 @@ import Logo from "/images/Logo.png";
 import { useState, useEffect } from "react";
 import { Search } from "../Sections/Search";
 import DropdownLoggedOut from "../Sections/DropdownLoggedOut";
+import DropdownLoggedIn from "../Sections/DropdownLoggedIn";
 export const Header = () => {
   const [dark, setDark] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
-  const [logInOut, setLogInOut] = useState(false);
+  const [dropDown, setDropDown] = useState(false);
   useEffect(() => {
     if (dark) {
       document.documentElement.classList.add("dark");
@@ -49,11 +50,11 @@ export const Header = () => {
               </div>
               <div className="flex flex-col gap-2 relative">
                 <GoPerson
-                  onClick={() => setLogInOut(!logInOut)}
+                  onClick={() => setDropDown(!dropDown)}
                   className="md:w-6 md:h-6 h-4 w-4 dark:text-gray-200 cursor-pointer text-blue-900"
                 />
                 <div className="absolute top-12 right-0">
-                  {logInOut && <DropdownLoggedOut />}
+                  {dropDown && <DropdownLoggedIn setDropDown={setDropDown} />}
                 </div>
               </div>
             </div>
