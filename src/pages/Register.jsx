@@ -13,7 +13,7 @@ export const Register = () => {
               required
               placeholder="Enter name please!"
               autoComplete="off"
-              className="block dark:bg-slate-200 rounded-sm bg-blue-900 text-slate-200 dark:text-blue-900 italic py-1 px-2 font-semibold"
+              className="block dark:bg-slate-200 rounded-sm bg-blue-800 text-slate-200 dark:text-blue-900 italic py-1 px-2 font-semibold"
             />
           </div>
           <div className="my-2 flex flex-col">
@@ -28,7 +28,7 @@ export const Register = () => {
               required
               placeholder="Enter  email please!"
               autoComplete="off"
-              className="block dark:bg-slate-200 rounded-sm dark:text-blue-900 text-slate-200 bg-blue-900 py-1 px-2 font-semibold italic"
+              className="block dark:bg-slate-200 rounded-sm dark:text-blue-900 text-slate-200 bg-blue-800 py-1 px-2 font-semibold italic"
             />
           </div>
           <div className="my-2 flex flex-col">
@@ -41,11 +41,11 @@ export const Register = () => {
               required
               autoComplete="off"
               placeholder="Make strong password!"
-              className="block dark:bg-slate-200 rounded-sm italic bg-blue-900 dark:text-blue-900 text-slate-200 py-1 px-2 text-md font-semibold"
+              className="block dark:bg-slate-200 rounded-sm italic bg-blue-800 dark:text-sky-900 text-slate-200 py-1 px-2 text-md font-semibold"
             />
           </div>
           <div className="my-10 text-left">
-            <button className="dark:hover:bg-blue-900 dark:hover:text-slate-200 p-2 rounded-md dark:bg-slate-200 dark:text-sky-900 bg-blue-900 text-white hover:scale-110">
+            <button className="dark:hover:bg-blue-900 dark:hover:text-slate-200 p-2 rounded-md dark:bg-slate-200 dark:text-sky-900 bg-blue-800 text-white hover:scale-110">
               Register
             </button>
           </div>
