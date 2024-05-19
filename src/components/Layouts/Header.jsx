@@ -54,7 +54,7 @@ export const Header = () => {
                   className="md:w-6 md:h-6 h-4 w-4 dark:text-gray-200 cursor-pointer text-blue-900"
                 />
                 <div className="absolute top-12 right-0">
-                  {dropDown && <DropdownLoggedIn setDropDown={setDropDown} />}
+                  {dropDown && <DropdownLoggedOut setDropDown={setDropDown} />}
                 </div>
               </div>
             </div>
