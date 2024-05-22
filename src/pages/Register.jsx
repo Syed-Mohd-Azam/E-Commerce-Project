@@ -1,4 +1,7 @@
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 export const Register = () => {
+  const navigate = useNavigate();
   const handleRegister = async (event) => {
     event.preventDefault();
     const authDetail = {
@@ -14,12 +17,24 @@ export const Register = () => {
       },
       body: JSON.stringify(authDetail),
     };
-    const response = await fetch(
-      "http://localhost:8000/register",
-      optionsRequest
-    );
-    const jsonData = await response.json();
-    console.log(jsonData);
+    try {
+      const response = await fetch(
+        "http://localhost:8000/register",
+        optionsRequest
+      );
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || "Failed to register");
+      }
+
+      const jsonData = await response.json();
+      console.log(jsonData);
+      toast.success("Registration successful!");
+      navigate("/products");
+    } catch (error) {
+      console.error("Error:", error);
+      toast.error(error.message || "Registration failed. Please try again.");
+    }
   };
   return (
     <>
