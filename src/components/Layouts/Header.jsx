@@ -9,16 +9,19 @@ import { Search } from "../Sections/Search";
 import DropdownLoggedOut from "../Sections/DropdownLoggedOut";
 import DropdownLoggedIn from "../Sections/DropdownLoggedIn";
 export const Header = () => {
-  const [dark, setDark] = useState(false);
+  const [darkMode, setDarkMode] = useState(
+    JSON.parse(localStorage.getItem("darkMode")) || false
+  );
   const [showSearch, setShowSearch] = useState(false);
   const [dropDown, setDropDown] = useState(false);
   useEffect(() => {
-    if (dark) {
+    localStorage.setItem("darkMode", JSON.stringify(darkMode));
+    if (darkMode) {
       document.documentElement.classList.add("dark");
     } else {
       document.documentElement.classList.remove("dark");
     }
-  }, [dark]);
+  }, [darkMode]);
   return (
     <>
       <header>
@@ -36,7 +39,7 @@ export const Header = () => {
             <div className="flex items-center md:space-x-5 space-x-3 rtl:space-x-reverse ">
               <GrSettingsOption
                 className="md:w-6 md:h-6 h-4 w-4 dark:text-gray-200 cursor-pointer text-blue-900"
-                onClick={() => setDark(!dark)}
+                onClick={() => setDarkMode(!darkMode)}
               />
               <IoSearch
                 className="md:w-6 md:h-6 h-4 w-4 dark:text-gray-200 cursor-pointer text-blue-900"
