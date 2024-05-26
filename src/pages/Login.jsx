@@ -33,13 +33,13 @@ export const Login = () => {
             />
           </div>
           <div className="my-10 mx-3 text-left">
-            <button className="text-[20px] dark:hover:bg-slate-800 dark:hover:text-slate-200 p-2 px-3 rounded-md dark:bg-slate-200 dark:text-slate-900 bg-slate-800 text-white hover:scale-110">
+            <button className="text-[20px] dark:hover:bg-slate-900 dark:hover:text-slate-200 p-2 px-3 rounded-md dark:bg-slate-200 dark:text-blue-900 bg-slate-800 text-white hover:scale-110">
               Login as User
             </button>
           </div>
         </form>
         <div className="text-left px-2">
-          <button className="text-[20px] dark:hover:bg-slate-900 dark:hover:text-slate-200 p-2 px-3 rounded-md dark:bg-slate-200 dark:text-slate-900 bg-slate-800 text-white hover:scale-110">
+          <button className="text-[20px] dark:hover:bg-slate-900 dark:hover:text-slate-200 p-2 px-3 rounded-md dark:bg-slate-200 dark:text-blue-900 bg-slate-800 text-white hover:scale-110">
             Login as Guest
           </button>
         </div>
