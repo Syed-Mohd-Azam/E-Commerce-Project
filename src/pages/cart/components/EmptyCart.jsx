@@ -1,7 +1,7 @@
 export const EmptyCard = () => {
   return (
     <>
-      <section></section>
+      <section>Empty Card</section>
     </>
   );
 };

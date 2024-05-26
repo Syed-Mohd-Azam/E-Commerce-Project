@@ -37,11 +37,11 @@ export const ProductDetails = () => {
           />
           <article className="flex flex-col gap-3">
             <p className="pb-4 text-3xl text-slate-900 font-semibold dark:text-gray-200">
-              {productDetails?.price}
+              {productDetails?.price}$
             </p>
             <article className="flex flex-row gap-3 mb-1">
               <button className="bg-blue-700 text-gray-200 font-bold italic py-1 px-2 rounded-md dark:bg-gray-200 dark:text-blue-900 text-md md:text-lg ">
-                {productDetails?.best_seller ? "Best Seller" : null}
+                {productDetails?.best_seller ? "Best Seller" : "Seller"}
               </button>
               <button className="bg-blue-700 text-gray-200 font-bold italic py-1 px-2 rounded-md dark:bg-gray-200 dark:text-blue-700 text-md md:text-lg ">
                 {productDetails?.in_stock ? "In Stock" : "Out of Stock"}

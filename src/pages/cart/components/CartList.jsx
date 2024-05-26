@@ -1,7 +1,7 @@
 export const CartList = () => {
   return (
     <>
-      <section></section>
+      <section>CartList</section>
     </>
   );
 };
