@@ -1,4 +1,5 @@
 import { BsCart2 } from "react-icons/bs";
+import { Link } from "react-router-dom";
 export const EmptyCart = () => {
   return (
     <>
@@ -11,6 +12,11 @@ export const EmptyCart = () => {
           <p className="dark:text-gray-200 text-blue-900  font-semibold italic md:text-lg text-sm">
             Add e-books from our collection!
           </p>
+          <Link to="/products">
+            <button className=" p-2 mt-3 rounded-md text-white bg-blue-800 text-md font-bold italic dark:bg-gray-200 dark:text-blue-800 ">
+              Explore e-books
+            </button>
+          </Link>
         </article>
       </section>
     </>
