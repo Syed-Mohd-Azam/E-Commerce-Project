@@ -3,7 +3,6 @@ import { useFilterContext } from "../../../contexts";
 // eslint-disable-next-line react/prop-types
 export const FilterBar = ({ setShow }) => {
   const { state, dispatch } = useFilterContext();
-  console.log("Filter Bar Called! ");
   return (
     <>
       <section className="h-screen fixed top-0 left-0 shadow w-[230px] z-10 bg-white dark:bg-slate-800 p-3">
