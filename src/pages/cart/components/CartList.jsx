@@ -37,10 +37,10 @@ export const CartList = () => {
   return (
     <>
       <section className="w-4/5 mx-auto  p-4 mb-8">
-        <p className="text-blue-900 dark:text-gray-200 font-semibold text underline underline-2 underline-offset-2 text-center text-2xl mt-5 mb-5">
+        <p className="text-blue-900 dark:text-gray-200 font-semibold text underline underline-2 underline-offset-2 text-center text-2xl mt-5 mb-12">
           My Cart ({cartCardList?.length})
         </p>
-        <section>
+        <section className="mt-5">
           {cartCardList?.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
