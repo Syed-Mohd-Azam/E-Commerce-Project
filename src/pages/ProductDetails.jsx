@@ -26,7 +26,7 @@ export const ProductDetails = () => {
   return (
     <>
       <section className="md:w-4/5 mx-auto  flex-1 p-10 md:p-0">
-        <h1 className="w-full text-center pb-8 pt-3 text-lg md:text-xl lg:text-3xl text-slate-800 italic font-semibold dark:text-gray-200">
+        <h1 className="w-full text-center pb-8 pt-3 text-lg md:text-xl lg:text-3xl text-blue-800 italic font-semibold dark:text-gray-200">
           {productDetails?.name}
         </h1>
         <section className=" flex flex-col lg:flex-row gap-10">
