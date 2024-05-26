@@ -37,7 +37,7 @@ export const CartList = () => {
   return (
     <>
       <section className="w-4/5 mx-auto  p-4 mb-8">
-        <p className="text-blue-900 dark:text-gray-200 font-semibold text underline underline-2 underline-offset-2 text-center text-2xl mt-5 mb-12">
+        <p className="text-blue-800 dark:text-gray-200 font-bold text underline underline-2 underline-offset-2 text-center text-2xl mt-5 mb-12 italic">
           My Cart ({cartCardList?.length})
         </p>
         <section className="mt-5">
