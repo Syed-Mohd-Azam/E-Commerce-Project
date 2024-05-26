@@ -3,7 +3,7 @@ import { IoMdClose } from "react-icons/io";
 export const CheckOut = ({ setCheckOut }) => {
   return (
     <>
-      <section className="absolute top-0 w-2/3 mx-auto h-full dark:bg-slate-900 shadow-lg bg-blue-400 px-10 py-5">
+      <section className="absolute top-0 w-2/3 mx-auto h-full dark:bg-blue-900 shadow-lg bg-blue-400 px-10 py-5">
         <article className="flex justify-between">
           <p className="text-white  dark:text-gray-200 md:text-2xl italic sm:text-lg text-sm">
             Card Payment
