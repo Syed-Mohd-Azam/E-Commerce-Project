@@ -15,6 +15,9 @@ export const ProductCard = ({ product }) => {
             <p className="text-xs md:text-xl font-semibold italic text-blue-800 dark:text-gray-200">
               {product?.name}
             </p>
+            <button className=" mt-3 inline bg-red-400 text-white dark:bg-yellow-400 dark:text-black px-2 py-1 rounded-md font-semibold text-md">
+              Remove
+            </button>
           </article>
         </article>
         <article className="text-xl dark:text-gray-200 text-blue-800 font-bold hover:scale-125 hover:cursor-pointer">
