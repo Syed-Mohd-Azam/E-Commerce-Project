@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "id": 10001,
+      "id": "10001",
       "name": "Basics To Advanced In React",
       "overview": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error unde quisquam magni vel eligendi nam.",
       "long_description": "React is a JavaScript library for building user interfaces. It uses components, props, and state. You'll handle events, render conditionally, and manage forms. Advanced topics include state management with Redux and server-side rendering.",
@@ -14,7 +14,7 @@
       "best_seller": true
     },
     {
-      "id": 10002,
+      "id": "10002",
       "name": "Django Framework for Beginners",
       "overview": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error unde quisquam magni vel eligendi nam.",
       "long_description": "Django is a Python web framework known for its rapid development and clean design. It includes features like an ORM, templating engine, and user authentication, making it beginner-friendly yet powerful for building web applications. ",
@@ -27,7 +27,7 @@
       "best_seller": false
     },
     {
-      "id": 10003,
+      "id": "10003",
       "name": "The Future of Design Systems",
       "overview": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error unde quisquam magni vel eligendi nam.",
       "long_description": "Design systems are set to become more integral in product development, offering dynamic, AI-driven, and collaborative solutions. Expect streamlined processes, enhanced accessibility, and a focus on consistency and innovation as design systems evolve further.",
@@ -40,7 +40,7 @@
       "best_seller": false
     },
     {
-      "id": 10004,
+      "id": "10004",
       "name": "The Complete Guide to Backend Development",
       "overview": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error unde quisquam magni vel eligendi nam.",
       "long_description": " The Complete Guide to Backend Development is a comprehensive resource covering database management, server architecture, API design, authentication, and deployment. It's suitable for developers of all levels, offering practical insights and best practices for building scalable backend systems.",
@@ -53,7 +53,7 @@
       "best_seller": true
     },
     {
-      "id": 10005,
+      "id": "10005",
       "name": "Build a Blockchain from Scratch in Go",
       "overview": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error unde quisquam magni vel eligendi nam.",
       "long_description": "Build a Blockchain from Scratch in Go is a brief tutorial that teaches you how to construct a basic blockchain using the Go programming language. It covers essential blockchain concepts and guides you through implementing key components like blocks, transactions, and consensus algorithms.",
@@ -66,7 +66,7 @@
       "best_seller": false
     },
     {
-      "id": 10006,
+      "id": "10006",
       "name": "Frontend Fastlane Plan With Projects",
       "overview": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error unde quisquam magni vel eligendi nam.",
       "long_description": "Frontend Fastlane Plan With Projects offers a streamlined path to mastering frontend development. It provides a clear roadmap for learning HTML, CSS, JavaScript, and frameworks like React or Vue.js. With practical projects included, it accelerates skill development for aspiring frontend developers.",
@@ -79,7 +79,7 @@
       "best_seller": false
     },
     {
-      "id": 10007,
+      "id": "10007",
       "name": "Master the Code Review",
       "overview": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error unde quisquam magni vel eligendi nam.",
       "long_description": "Master the Code Review is a concise guide focused on improving your code review skills. It covers best practices for providing constructive feedback, identifying bugs, and ensuring code quality. With practical tips and examples, this resource helps developers enhance collaboration, efficiency, and codebase reliability through effective code reviews. ",
@@ -92,7 +92,7 @@
       "best_seller": false
     },
     {
-      "id": 10008,
+      "id": "10008",
       "name": "JavaScript Basics To Advance With Shubham",
       "overview": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error unde quisquam magni vel eligendi nam.",
       "long_description": "JavaScript Basics to Advance with Shubham is a tutorial series covering essential to advanced JavaScript topics, led by Shubham. With clear explanations and practical examples, learners gain proficiency in JavaScript for web development.",
@@ -105,7 +105,7 @@
       "best_seller": true
     },
     {
-      "id": 10009,
+      "id": "10009",
       "name": "Python Deep Dive With Projects",
       "overview": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error unde quisquam magni vel eligendi nam.",
       "long_description": "Python Deep Dive With Projects is a focused course that explores advanced Python programming concepts through hands-on projects. Covering topics like object-oriented programming and data analysis, it offers practical experience alongside in-depth learning. Perfect for learners aiming to master Python for real-world applications.",
@@ -118,7 +118,7 @@
       "best_seller": false
     },
     {
-      "id": 10010,
+      "id": "10010",
       "name": "Mastering Software Technique",
       "overview": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error unde quisquam magni vel eligendi nam.",
       "long_description": "Mastering Software Technique is a succinct guide focusing on advanced software development skills. It covers various techniques and best practices across programming languages, aiding developers in writing efficient, maintainable code.",
@@ -131,7 +131,7 @@
       "best_seller": false
     },
     {
-      "id": 10011,
+      "id": "10011",
       "name": "Web Development Foundation",
       "overview": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error unde quisquam magni vel eligendi nam.",
       "long_description": "Web Development Foundation offers a beginner-friendly introduction to essential web development concepts like HTML, CSS, JavaScript, and basic backend principles. Through practical examples, it provides a solid starting point for aspiring web developers.",
@@ -144,7 +144,7 @@
       "best_seller": true
     },
     {
-      "id": 10012,
+      "id": "10012",
       "name": "Mastering Git and GitHub - A Practical Guide",
       "overview": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error unde quisquam magni vel eligendi nam.",
       "long_description": "Mastering Git and GitHub - A Practical Guide is a concise resource for mastering version control with Git and collaborative development with GitHub. It covers essential commands, branching, merging, and collaboration tips, providing practical guidance for developers. ",
@@ -157,7 +157,7 @@
       "best_seller": false
     },
     {
-      "id": 10013,
+      "id": "10013",
       "name": "Everything About React v16",
       "overview": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error unde quisquam magni vel eligendi nam.",
       "long_description": "Everything About React v16 is a thorough guide covering React version 16. It includes basics like component creation and state management, along with advanced topics such as React Hooks and Context API. Perfect for both beginners and experienced developers seeking to master React development. ",
@@ -170,7 +170,7 @@
       "best_seller": false
     },
     {
-      "id": 10014,
+      "id": "10014",
       "name": "Diving Deep With Python 2.7",
       "overview": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error unde quisquam magni vel eligendi nam.",
       "long_description": "Diving Deep With Python 2.7 is an advanced course focusing on Python 2.7, covering topics such as data structures, functional programming, threading, and networking. Perfect for experienced developers seeking to enhance their Python skills. ",
@@ -183,7 +183,7 @@
       "best_seller": false
     },
     {
-      "id": 10015,
+      "id": "10015",
       "name": "Kickstart Your UI Design Career",
       "overview": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error unde quisquam magni vel eligendi nam.",
       "long_description": "Kickstart Your UI Design Career is a beginner-friendly guide that introduces essential design principles, popular tools, and practical tips for aspiring UI designers. It provides a clear roadmap for launching a successful career in UI design, making it an invaluable resource for beginners in the field. ",
@@ -198,7 +198,7 @@
   ],
   "featured_products": [
     {
-      "id": 1,
+      "id": "1",
       "name": "The Psychology Of Motivation",
       "overview": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error unde quisquam magni vel eligendi nam.",
       "long_description": "The Psychology of Motivation offers profound insights into the intricate mechanisms driving human behavior and aspirations.",
@@ -211,7 +211,7 @@
       "best_seller": true
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "The Ultimate  Handbook",
       "overview": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error unde quisquam magni vel eligendi nam.",
       "long_description": "If you are like most Internet marketers, you would not hire a copywriter for most of your projects and for good reasons, too.",
@@ -224,7 +224,7 @@
       "best_seller": true
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Social Media Traffic Streams",
       "overview": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error unde quisquam magni vel eligendi nam.",
       "long_description": "Unlock the power of social media with 'Social Media Traffic Streams'—your ultimate guide to boosting online visibility and driving traffic.",
