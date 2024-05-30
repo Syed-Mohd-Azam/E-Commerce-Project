@@ -45,7 +45,7 @@ export const CartContextProvider = ({ children }) => {
 };
 // eslint-disable-next-line react-refresh/only-export-components
 export const useCartContext = () => {
-  const context = useContext();
-  console.log(context);
+  const context = useContext(CartContext);
+  console.log("context", context);
   return context;
 };

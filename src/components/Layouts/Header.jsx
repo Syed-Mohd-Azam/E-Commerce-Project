@@ -8,7 +8,9 @@ import { useState, useEffect } from "react";
 import { Search } from "../Sections/Search";
 import DropdownLoggedOut from "../Sections/DropdownLoggedOut";
 import DropdownLoggedIn from "../Sections/DropdownLoggedIn";
+import { useCartContext } from "../../contexts";
 export const Header = () => {
+  const { cartList } = useCartContext();
   const [darkMode, setDarkMode] = useState(
     JSON.parse(localStorage.getItem("darkMode")) || false
   );
@@ -49,7 +51,7 @@ export const Header = () => {
                 <div className="flex flex-col relative">
                   <FaShoppingCart className="md:w-6 md:h-6 h-4 w-4 dark:text-gray-200 cursor-pointer " />
                   <span className="absolute -right-3 -top-3 bg-red-400 text-white px-1 py-0 font-bold rounded-full text-xs">
-                    0
+                    {cartList?.length}
                   </span>
                 </div>
               </Link>
