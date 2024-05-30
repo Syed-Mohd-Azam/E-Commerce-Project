@@ -17,7 +17,7 @@ export const featured = [
     price: "46$",
   },
   {
-    title: "The Ultimate Copywriting Handbook",
+    title: "The Ultimate  Handbook",
     img: CopyRight,
     description:
       "If you are like most Internet marketers, you would not hire a copywriter for most of your projects and for good reasons, too.",

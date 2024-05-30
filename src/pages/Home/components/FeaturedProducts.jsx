@@ -1,5 +1,5 @@
-import { ProductCard } from "../../../components";
 import { useEffect, useState } from "react";
+import { ProductPage } from "./ProductPage";
 export const FeaturedProducts = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
@@ -21,7 +21,7 @@ export const FeaturedProducts = () => {
           {products.length > 0 &&
             products?.map((product) => (
               <>
-                <ProductCard key={product?.id} product={product} />
+                <ProductPage product={product} />
               </>
             ))}
         </article>
