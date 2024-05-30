@@ -7,7 +7,7 @@ import { useCartContext } from "../contexts";
 export const ProductDetails = () => {
   const [productDetails, setProductDetails] = useState(null);
   const [productInCart, setInCart] = useState(false);
-  const { cartList, deleteFromCart } = useCartContext();
+  const { cartList, deleteFromCart, addToCart } = useCartContext();
   const { id } = useParams();
   console.log(id);
   useTitle(productDetails ? productDetails?.name : "");
@@ -48,10 +48,10 @@ export const ProductDetails = () => {
               {productDetails?.price}$
             </p>
             <article className="flex flex-row gap-3 mb-1">
-              <button className="bg-blue-700 text-gray-200 font-bold italic py-1 px-2 rounded-md dark:bg-gray-200 dark:text-blue-900 text-md md:text-lg ">
+              <button className="bg-purple-800 text-gray-200 font-bold italic py-1 px-2 rounded-md dark:bg-gray-200 dark:text-blue-900 text-md md:text-lg ">
                 {productDetails?.best_seller ? "Best Seller" : "Seller"}
               </button>
-              <button className="bg-blue-700 text-gray-200 font-bold italic py-1 px-2 rounded-md dark:bg-gray-200 dark:text-blue-700 text-md md:text-lg ">
+              <button className="bg-green-700 text-gray-200 font-bold italic py-1 px-2 rounded-md dark:bg-gray-200 dark:text-blue-700 text-md md:text-lg ">
                 {productDetails?.in_stock ? "In Stock" : "Out of Stock"}
               </button>
               <button className="bg-blue-700 text-gray-200 font-bold italic py-1 px-2 rounded-md dark:bg-gray-200 dark:text-blue-900 text-md md:text-lg">
@@ -61,14 +61,17 @@ export const ProductDetails = () => {
             <Rating rating={productDetails?.rating} />
             <article>
               {!productInCart && (
-                <button className="bg-blue-700 rounded-md px-3 py-2 text-white hover:scale-110 text-lg dark:text-gray-200 font-semibold">
+                <button
+                  onClick={() => addToCart(productDetails)}
+                  className="bg-blue-700 rounded-md px-3 py-2 text-white hover:scale-110 text-lg dark:text-gray-200 font-semibold"
+                >
                   Add to Cart +
                 </button>
               )}
               {productInCart && (
                 <button
                   onClick={() => deleteFromCart(productDetails)}
-                  className="bg-red-300 dark:bg-red-600 rounded-md px-3 py-2 text-white hover:scale-110 text-lg dark:text-slate-200 font-semibold"
+                  className="bg-red-400 dark:bg-red-600 rounded-md px-3 py-2 text-white hover:scale-110 text-lg dark:text-slate-200 font-semibold"
                 >
                   Remove from Cart
                 </button>
