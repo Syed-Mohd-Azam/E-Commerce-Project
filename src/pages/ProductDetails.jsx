@@ -2,18 +2,26 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Rating from "../components/Sections/Rating";
 import { useTitle } from "../hooks/useTitle";
+import { useCartContext } from "../contexts";
 
 export const ProductDetails = () => {
   const [productDetails, setProductDetails] = useState(null);
+  const [productInCart, setInCart] = useState(false);
+  const { cartList, deleteFromCart } = useCartContext();
   const { id } = useParams();
+  console.log(id);
   useTitle(productDetails ? productDetails?.name : "");
   useEffect(() => {
     fetchProductDetails();
   }, []);
+  useEffect(() => {
+    const result = cartList.find((item) => item.id === id);
+    result ? setInCart(true) : setInCart(false);
+  }, [cartList, id]);
   const fetchProductDetails = async () => {
     const productDetails = await fetch(`http://localhost:8000/products/${id}`);
     const details = await productDetails.json();
-    console.log(details);
+    console.log("details", details);
     setProductDetails(details);
   };
   if (productDetails === null) {
@@ -52,9 +60,19 @@ export const ProductDetails = () => {
             </article>
             <Rating rating={productDetails?.rating} />
             <article>
-              <button className="bg-blue-700 rounded-md px-3 py-2 text-white hover:scale-110 text-lg dark:text-gray-200 font-semibold">
-                Add to Cart +
-              </button>
+              {!productInCart && (
+                <button className="bg-blue-700 rounded-md px-3 py-2 text-white hover:scale-110 text-lg dark:text-gray-200 font-semibold">
+                  Add to Cart +
+                </button>
+              )}
+              {productInCart && (
+                <button
+                  onClick={() => deleteFromCart(productDetails)}
+                  className="bg-red-300 dark:bg-red-600 rounded-md px-3 py-2 text-white hover:scale-110 text-lg dark:text-slate-200 font-semibold"
+                >
+                  Remove from Cart
+                </button>
+              )}
             </article>
             <article className="text-md md:text-lg lg:text-xl text-slate-800 italic py-4 font-normal text-justify dark:text-gray-200">
               {productDetails?.long_description}

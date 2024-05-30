@@ -5,7 +5,7 @@ import { useCartContext } from "../../../contexts";
 import { Link } from "react-router-dom";
 export const CartList = () => {
   const [checkOut, setCheckOut] = useState(false);
-  const { cartList } = useCartContext();
+  const { cartList, total } = useCartContext();
   return (
     <>
       <section className="w-4/5 mx-auto  p-4 mb-8">
@@ -17,6 +17,9 @@ export const CartList = () => {
             <ProductCard key={product.id} product={product} />
           ))}
         </section>
+        <p className="font-bold dark:text-slate-200 text-blue-800 md:text-2xl text-lg md:text-right text-center px-10 pt-2 pb-16 italic">
+          Total :- {total}$
+        </p>
         <section className="flex flex-col gap-5 md:flex-row md:justify-between px-12">
           <Link to="/products">
             <button

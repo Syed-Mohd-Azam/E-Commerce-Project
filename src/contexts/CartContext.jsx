@@ -10,7 +10,7 @@ export const CartContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(CartReducer, cartInitialState);
   function addToCart(product) {
     const updatedList = state.cartList.concat(product);
-    const total = state.total + product.price;
+    const total = Number(state.total) + Number(product.price);
     dispatch({
       type: "ADD_TO_CART",
       payload: { productsList: updatedList, total: total },
@@ -18,7 +18,7 @@ export const CartContextProvider = ({ children }) => {
   }
   function deleteFromCart(product) {
     const updatedList = state.cartList.filter((item) => item.id !== product.id);
-    const total = state.total - product.price;
+    const total = Number(state.total) - Number(product.price);
     dispatch({
       type: "REMOVE_FROM_CART",
       payload: { productsList: updatedList, total: total },

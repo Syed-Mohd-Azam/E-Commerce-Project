@@ -1,23 +1,45 @@
+/* eslint-disable react/prop-types */
 // eslint-disable-next-line react/prop-types
 import { Link } from "react-router-dom";
 import { useCartContext } from "../../contexts";
 import { Rating } from "./Rating";
+import { useEffect, useState } from "react";
 // eslint-disable-next-line react/prop-types
 export const ProductCard = ({ product }) => {
-  const { addToCart } = useCartContext();
+  const { cartList, addToCart } = useCartContext();
+  console.log("c", cartList);
+  const [presentInCart, setInCart] = useState(false);
+  useEffect(() => {
+    const result = cartList.find((item) => item.id === product?.id);
+    result ? setInCart(true) : setInCart(false);
+  }, [cartList, product?.id]);
+
   return (
     <>
       <section className=" h-auto w-4/5 lg:w-[300px]  rounded-xl relative">
-        <Link to="/cart">
-          <button
-            onClick={() => addToCart(product)}
-            className=" absolute top-0 right-0  p-2 bg-green-500 text-white dark:bg-gray-200 dark:text-blue-900 rounded-md italic font-bold hover:scale-110 hover:skew-x-6"
-          >
-            Add to cart
-          </button>
-        </Link>
+        {!presentInCart && (
+          <Link to="/cart">
+            <button
+              onClick={() => addToCart(product)}
+              className=" absolute top-0 right-0  p-2 bg-green-500 text-white dark:bg-gray-200 dark:text-blue-900 rounded-md italic font-bold hover:scale-110 hover:skew-x-6"
+            >
+              Add to cart
+            </button>
+          </Link>
+        )}
+        {presentInCart && (
+          <Link to="/cart">
+            <button
+              onClick={() => addToCart(product)}
+              className=" absolute top-0 right-0  p-2 bg-red-400 text-white dark:bg-red-700 dark:text-slate-200 rounded-md italic font-bold hover:scale-110 hover:skew-x-6"
+            >
+              Remove from Cart
+            </button>
+          </Link>
+        )}
         <article className=" w-full  h-[200px]">
           <img
+            // eslint-disable-next-line react/prop-types
             src={product?.image_local}
             alt="Book-Image"
             className="w-full h-full dark:text-gray-200 rounded-t-xl"
