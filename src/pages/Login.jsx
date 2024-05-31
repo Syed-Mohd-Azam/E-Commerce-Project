@@ -16,7 +16,7 @@ export const Login = () => {
               required
               placeholder="Enter  email please!"
               autoComplete="off"
-              className="block dark:bg-slate-200 rounded-sm dark:text-slate-900 text-slate-200 bg-slate-800 py-1 px-2 font-semibold italic"
+              className="block text-sm md:text-lg dark:bg-slate-200 rounded-md dark:text-blue-900 text-white bg-blue-900 py-2 px-2 font-semibold italic placeholder:text-white dark:placeholder:text-slate-900"
             />
           </div>
           <div className="m-4 flex flex-col">
@@ -29,17 +29,17 @@ export const Login = () => {
               required
               autoComplete="off"
               placeholder="Make strong password!"
-              className="block dark:bg-slate-200 rounded-sm italic bg-slate-800 dark:text-slate-900 text-slate-200 py-1 px-2 text-md font-semibold"
+              className="block text-sm  dark:bg-slate-200 rounded-md italic bg-blue-900 dark:text-blue-900 text-white py-2 px-2 md:text-lg font-semibold placeholder:text-white dark:placeholder:text-slate-900"
             />
           </div>
-          <div className="my-10 mx-3 text-left">
-            <button className="text-[20px] dark:hover:bg-slate-900 dark:hover:text-slate-200 p-2 px-3 rounded-md dark:bg-slate-200 dark:text-blue-900 bg-slate-800 text-white hover:scale-110">
+          <div className="my-10 mx-4 text-left">
+            <button className=" text-sm md:text-lg dark:hover:bg-blue-900 dark:hover:text-slate-200 p-2 px-3 rounded-md dark:bg-slate-200 dark:text-slate-900 bg-blue-900 text-white hover:scale-110">
               Login as User
             </button>
           </div>
         </form>
-        <div className="text-left px-2">
-          <button className="text-[20px] dark:hover:bg-slate-900 dark:hover:text-slate-200 p-2 px-3 rounded-md dark:bg-slate-200 dark:text-blue-900 bg-slate-800 text-white hover:scale-110">
+        <div className="text-left px-2 mx-2">
+          <button className=" text-sm md:text-lg dark:hover:bg-blue-700 dark:hover:text-slate-200 p-2 px-3 rounded-md dark:bg-slate-200 dark:text-slate-900 bg-blue-900 text-white hover:scale-110">
             Login as Guest
           </button>
         </div>
