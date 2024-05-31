@@ -6,8 +6,8 @@ import { Rating } from "./Rating";
 import { useEffect, useState } from "react";
 // eslint-disable-next-line react/prop-types
 export const ProductCard = ({ product }) => {
+  console.log(product);
   const { cartList, addToCart } = useCartContext();
-  console.log("c", cartList);
   const [presentInCart, setInCart] = useState(false);
   useEffect(() => {
     const result = cartList.find((item) => item.id === product?.id);
@@ -21,7 +21,10 @@ export const ProductCard = ({ product }) => {
           <Link to="/cart">
             <button
               onClick={() => addToCart(product)}
-              className=" absolute top-0 right-0  p-2 bg-green-500 text-white dark:bg-gray-200 dark:text-blue-900 rounded-md italic font-bold hover:scale-110 hover:skew-x-6"
+              className={`absolute top-0 right-0  p-2 bg-green-500 text-white dark:bg-gray-200 dark:text-blue-900 rounded-md italic font-bold hover:scale-110 hover:skew-x-6 ${
+                product?.in_stock ? "cursor-pointer" : "cursor-not-allowed"
+              }`}
+              disabled={!product?.in_stock}
             >
               Add to cart
             </button>
