@@ -9,6 +9,7 @@ import {
   Register,
 } from "../pages";
 import { FilterBar } from "../pages/Products/components/FilterBar";
+import { ProtectedRoute } from "./ProtectedRoute";
 const AllRoutes = () => {
   return (
     <>
@@ -20,7 +21,14 @@ const AllRoutes = () => {
         <Route path="productDetails/:id" element={<ProductDetails />} />
         <Route path="register" element={<Register />} />
         <Route path="login" element={<Login />} />
-        <Route path="cart" element={<CartPage />} />
+        <Route
+          path="cart"
+          element={
+            <ProtectedRoute>
+              <CartPage />
+            </ProtectedRoute>
+          }
+        />
       </Routes>
     </>
   );
