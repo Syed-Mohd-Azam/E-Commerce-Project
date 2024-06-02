@@ -5,7 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 function App() {
   return (
     <>
-      <section className="dark:bg-slate-800 flex flex-col min-h-screen">
+      <section className="dark:bg-slate-800 flex flex-col min-h-screen ">
         <Header />
         <AllRoutes />
         <Footer />

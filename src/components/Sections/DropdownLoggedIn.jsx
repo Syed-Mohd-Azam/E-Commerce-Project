@@ -7,7 +7,7 @@ const DropdownLoggedIn = ({ setDropDown }) => {
         <ul>
           <li>
             <Link
-              to="products"
+              to="/products"
               onClick={() => setDropDown(false)}
               className="block px-2 py-1 hover:cursor-pointer hover:bg-gray-200 hover:text-sky-900 hover:rounded-t-md font-medium dark:hover:bg-black dark:hover:text-gray-200"
             >
@@ -16,7 +16,7 @@ const DropdownLoggedIn = ({ setDropDown }) => {
           </li>
           <li>
             <Link
-              to="dashboard"
+              to="/dashboard"
               onClick={() => setDropDown(false)}
               className="block px-2 py-1 hover:cursor-pointer hover:bg-gray-200 hover:text-sky-900 font-medium dark:hover:bg-black dark:hover:text-gray-200"
             >
@@ -25,7 +25,7 @@ const DropdownLoggedIn = ({ setDropDown }) => {
           </li>
           <li>
             <Link
-              to="logout"
+              to="/logout"
               onClick={() => setDropDown(false)}
               className="block px-2 py-1 hover:cursor-pointer hover:bg-gray-200 hover:text-sky-900 hover:rounded-b-md font-medium dark:hover:bg-black dark:hover:text-gray-200"
             >

@@ -18,6 +18,7 @@ export const CheckOut = ({ setCheckOut }) => {
         },
       });
       const jsonData = await response.json();
+      console.log(jsonData);
       setUser(jsonData);
     }
     getUser();
