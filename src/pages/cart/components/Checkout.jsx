@@ -1,11 +1,27 @@
 import { IoMdClose } from "react-icons/io";
 import { useCartContext } from "../../../contexts";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 // eslint-disable-next-line react/prop-types
 export const CheckOut = ({ setCheckOut }) => {
   const { total } = useCartContext();
-  const [cardNumber, setCardNumber] = useState(null);
+  const [user, setUser] = useState({});
+  useEffect(() => {
+    async function getUser() {
+      const token = JSON.parse(sessionStorage.getItem("token"));
+      const cbid = JSON.parse(sessionStorage.getItem("cbid"));
+      const response = await fetch(`http://localhost:8000/600/users/${cbid}`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      const jsonData = await response.json();
+      setUser(jsonData);
+    }
+    getUser();
+  }, []);
   return (
     <>
       <section className=" w-2/3 mx-auto  dark:bg-blue-900 shadow-lg bg-blue-400 px-10 py-5 flex-1">
@@ -32,6 +48,8 @@ export const CheckOut = ({ setCheckOut }) => {
             name="name"
             id="name"
             placeholder="Enter name"
+            value={user?.name || ""}
+            required={true}
             className="w-full rounded-md p-3 placeholder:italic placeholder:text-lg outline-0 hover:outline-0"
           />
         </article>
@@ -47,6 +65,8 @@ export const CheckOut = ({ setCheckOut }) => {
             name="email"
             placeholder="example@gmail.com"
             id="email"
+            value={user?.email || ""}
+            required={true}
             className="w-full rounded-md p-3 placeholder:italic placeholder:text-lg outline-0 hover:outline-0"
           />
         </article>
