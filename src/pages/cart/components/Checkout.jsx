@@ -1,6 +1,5 @@
 import { IoMdClose } from "react-icons/io";
 import { useCartContext } from "../../../contexts";
-import { Link } from "react-router-dom";
 // eslint-disable-next-line react/prop-types
 export const CheckOut = ({ setCheckOut }) => {
   const { total } = useCartContext();
@@ -19,7 +18,7 @@ export const CheckOut = ({ setCheckOut }) => {
         <article>
           <label
             htmlFor="name"
-            className="block text-white dark:text-gray-200 mt-4 mb-2 text-xl italic font-semibold"
+            className="block text-white dark:text-gray-200 mt-4 mb-2 text-xl italic font-semibold "
           >
             Name
           </label>
@@ -27,13 +26,13 @@ export const CheckOut = ({ setCheckOut }) => {
             type="text"
             name="name"
             id="name"
-            className="w-full rounded-md p-1"
+            className="w-full rounded-md p-3"
           />
         </article>
         <article>
           <label
             htmlFor="email"
-            className="block text-white dark:text-gray-200 mt-2 mb-2 text-xl italic font-semibold"
+            className="block text-white dark:text-gray-200 mt-2 mb-2 text-lg italic font-semibold"
           >
             Email
           </label>
@@ -41,13 +40,13 @@ export const CheckOut = ({ setCheckOut }) => {
             type="email"
             name="email"
             id="email"
-            className="w-full rounded-md p-1"
+            className="w-full rounded-md p-3"
           />
         </article>
         <article>
           <label
             htmlFor="cardNumber"
-            className="block text-white dark:text-gray-200 mt-2 mb-2 text-xl italic font-semibold"
+            className="block text-white dark:text-gray-200 mt-2 mb-2 text-lg italic font-semibold"
           >
             Card Number
           </label>
@@ -55,13 +54,13 @@ export const CheckOut = ({ setCheckOut }) => {
             type="number"
             name="cardNumber"
             id="cardNumber"
-            className="w-full rounded-md p-1"
+            className="w-full rounded-md p-3"
           />
         </article>
         <article>
           <label
             htmlFor="expiryDate"
-            className="block text-white dark:text-gray-200 mt-2 mb-2 text-xl italic font-semibold"
+            className="block text-white dark:text-gray-200 mt-2 mb-2 text-lg italic font-semibold"
           >
             Expiry Date
           </label>
@@ -71,21 +70,21 @@ export const CheckOut = ({ setCheckOut }) => {
               type="number"
               name="month"
               id="expiryDate"
-              className="w-1/2 rounded-md px-4 py-1"
+              className="w-1/2 rounded-md px-4 py-3"
             />
             <input
               placeholder="Year"
               type="number"
               name="year"
               id="expiryDate"
-              className="w-1/2 rounded-md py-1 px-4"
+              className="w-1/2 rounded-md p-3"
             />
           </article>
         </article>
         <article>
           <label
             htmlFor="securityCode"
-            className="block text-white dark:text-gray-200 mt-2 mb-2 text-xl italic font-semibold"
+            className="block text-white dark:text-gray-200 mt-2 mb-2 text-lg italic font-semibold"
           >
             Security Code
           </label>
@@ -93,14 +92,14 @@ export const CheckOut = ({ setCheckOut }) => {
             type="number"
             name="securityCode"
             id="securityCode"
-            className="w-full rounded-md p-1"
+            className="w-full rounded-md p-3"
           />
         </article>
         <p className="text-white dark:text-gray-200 text-xl text-center m-4 font-bold ">
           {total}$
         </p>
         <article className="w-full">
-          <button className="block w-full dark:text-gray-200 dark:bg-slate-800 p-2 rounded-lg text-sm  md:text-md italic font-bold hover:cursor-pointer bg-blue-800 text-white">
+          <button className="block w-full dark:text-gray-200 dark:bg-slate-800 p-3 rounded-lg text-sm  md:text-lg italic font-bold hover:cursor-pointer bg-blue-800 text-white ">
             Proceed to Payment
           </button>
         </article>
