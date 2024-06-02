@@ -1,5 +1,6 @@
 import { IoMdClose } from "react-icons/io";
 import { useCartContext } from "../../../contexts";
+import { Link } from "react-router-dom";
 // eslint-disable-next-line react/prop-types
 export const CheckOut = ({ setCheckOut }) => {
   const { total } = useCartContext();
@@ -10,10 +11,12 @@ export const CheckOut = ({ setCheckOut }) => {
           <p className="text-white  dark:text-gray-200 md:text-2xl italic sm:text-lg text-sm">
             Card Payment
           </p>
-          <IoMdClose
-            onClick={() => setCheckOut(false)}
-            className="md:w-8 md:h-8 h-5 w-5 hover:cursor-pointer text-white dark:text-gray-200 hover:scale-125"
-          />
+          <Link to="/cart">
+            <IoMdClose
+              onClick={() => setCheckOut(false)}
+              className="md:w-8 md:h-8 h-5 w-5 hover:cursor-pointer text-white dark:text-gray-200 hover:scale-125"
+            />
+          </Link>
         </article>
         <article>
           <label
