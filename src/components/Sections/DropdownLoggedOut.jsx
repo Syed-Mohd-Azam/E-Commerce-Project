@@ -17,7 +17,9 @@ const DropdownLoggedOut = ({ setDropDown }) => {
           <li>
             <Link
               to="login"
-              onClick={() => setDropDown(false)}
+              onClick={() => {
+                setDropDown(false);
+              }}
               className="block px-2 py-1 hover:cursor-pointer hover:bg-gray-200 hover:text-sky-900 font-medium dark:hover:bg-black dark:hover:text-gray-200"
             >
               Login

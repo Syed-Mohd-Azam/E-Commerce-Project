@@ -7,7 +7,7 @@ import Logo from "/images/Logo.png";
 import { useState, useEffect } from "react";
 import { Search } from "../Sections/Search";
 import DropdownLoggedOut from "../Sections/DropdownLoggedOut";
-import DropdownLoggedIn from "../Sections/DropdownLoggedIn";
+// import DropdownLoggedIn from "../Sections/DropdownLoggedIn";
 import { useCartContext } from "../../contexts";
 export const Header = () => {
   const { cartList } = useCartContext();
@@ -61,7 +61,7 @@ export const Header = () => {
                   className="md:w-6 md:h-6 h-4 w-4 dark:text-gray-200 cursor-pointer"
                 />
                 <div className="absolute top-12 right-0">
-                  {dropDown && <DropdownLoggedIn setDropDown={setDropDown} />}
+                  {dropDown && <DropdownLoggedOut setDropDown={setDropDown} />}
                 </div>
               </div>
             </div>
