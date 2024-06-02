@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const DropdownLoggedIn = ({ setDropDown }) => {
   return (
     <>
-      <section className="absolute top-12 right-4 w-20  sm:w-32 text-left bg-blue-900 text-white dark:text-blue-900 dark:bg-gray-200 font-normal  z-10 rounded-md italic sm:text-lg text-xs">
+      <section className="absolute top-12 right-4 w-20  sm:w-32 text-left bg-blue-500 text-white dark:text-blue-900 dark:bg-gray-200 font-normal  z-10 rounded-md italic sm:text-lg text-xs">
         <ul>
           <li>
             <Link
