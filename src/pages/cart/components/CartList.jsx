@@ -29,12 +29,14 @@ export const CartList = () => {
               Buy more books
             </button>
           </Link>
-          <button
-            onClick={() => setCheckOut(true)}
-            className=" p-2  bg-blue-900 text-gray-200 text-sm md:text-lg rounded-md dark:bg-gray-200 dark:text-blue-900 font-bold hover:dark:bg-blue-900 hover:dark:text-gray-200 hover:dark:scale-125 hover:bg-yellow-400 hover:text-black italic"
-          >
-            Place Order
-          </button>
+          <Link to="/paymentInfo">
+            <button
+              onClick={() => setCheckOut(true)}
+              className=" p-2  bg-blue-900 text-gray-200 text-sm md:text-lg rounded-md dark:bg-gray-200 dark:text-blue-900 font-bold hover:dark:bg-blue-900 hover:dark:text-gray-200 hover:dark:scale-125 hover:bg-yellow-400 hover:text-black italic"
+            >
+              Place Order
+            </button>
+          </Link>
         </section>
         {checkOut && <CheckOut setCheckOut={setCheckOut} />}
       </section>

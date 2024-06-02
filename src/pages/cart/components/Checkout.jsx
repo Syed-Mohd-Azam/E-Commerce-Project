@@ -1,9 +1,12 @@
 import { IoMdClose } from "react-icons/io";
+import { useCartContext } from "../../../contexts";
+import { Link } from "react-router-dom";
 // eslint-disable-next-line react/prop-types
 export const CheckOut = ({ setCheckOut }) => {
+  const { total } = useCartContext();
   return (
     <>
-      <section className="absolute top-0 w-2/3 mx-auto h-full dark:bg-blue-900 shadow-lg bg-blue-400 px-10 py-5">
+      <section className=" w-2/3 mx-auto  dark:bg-blue-900 shadow-lg bg-blue-400 px-10 py-5 flex-1">
         <article className="flex justify-between">
           <p className="text-white  dark:text-gray-200 md:text-2xl italic sm:text-lg text-sm">
             Card Payment
@@ -94,7 +97,7 @@ export const CheckOut = ({ setCheckOut }) => {
           />
         </article>
         <p className="text-white dark:text-gray-200 text-xl text-center m-4 font-bold ">
-          99 $
+          {total}$
         </p>
         <article className="w-full">
           <button className="block w-full dark:text-gray-200 dark:bg-slate-800 p-2 rounded-lg text-sm  md:text-md italic font-bold hover:cursor-pointer bg-blue-800 text-white">

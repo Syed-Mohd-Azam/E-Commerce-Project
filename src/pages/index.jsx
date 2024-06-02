@@ -5,3 +5,4 @@ export { FilteredProducts } from "./Products/FilteredProducts";
 export { Register } from "./Register";
 export { Login } from "./Login";
 export { CartPage } from "./cart/CartPage";
+export { CheckOut } from "./cart/components/Checkout";
