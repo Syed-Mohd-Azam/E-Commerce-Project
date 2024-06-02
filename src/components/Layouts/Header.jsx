@@ -60,9 +60,7 @@ export const Header = () => {
                   onClick={() => setDropDown(!dropDown)}
                   className="md:w-6 md:h-6 h-4 w-4 dark:text-gray-200 cursor-pointer"
                 />
-                <div className="absolute top-12 right-0">
-                  {dropDown && <DropdownLoggedOut setDropDown={setDropDown} />}
-                </div>
+                {dropDown && <DropdownLoggedOut setDropDown={setDropDown} />}
               </div>
             </div>
           </div>
