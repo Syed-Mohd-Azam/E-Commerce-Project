@@ -1,9 +1,11 @@
 import { IoMdClose } from "react-icons/io";
 import { useCartContext } from "../../../contexts";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 // eslint-disable-next-line react/prop-types
 export const CheckOut = ({ setCheckOut }) => {
   const { total } = useCartContext();
+  const [cardNumber, setCardNumber] = useState(null);
   return (
     <>
       <section className=" w-2/3 mx-auto  dark:bg-blue-900 shadow-lg bg-blue-400 px-10 py-5 flex-1">
@@ -29,7 +31,8 @@ export const CheckOut = ({ setCheckOut }) => {
             type="text"
             name="name"
             id="name"
-            className="w-full rounded-md p-3"
+            placeholder="Enter name"
+            className="w-full rounded-md p-3 placeholder:italic placeholder:text-lg outline-0 hover:outline-0"
           />
         </article>
         <article>
@@ -42,8 +45,9 @@ export const CheckOut = ({ setCheckOut }) => {
           <input
             type="email"
             name="email"
+            placeholder="example@gmail.com"
             id="email"
-            className="w-full rounded-md p-3"
+            className="w-full rounded-md p-3 placeholder:italic placeholder:text-lg outline-0 hover:outline-0"
           />
         </article>
         <article>
@@ -57,30 +61,34 @@ export const CheckOut = ({ setCheckOut }) => {
             type="number"
             name="cardNumber"
             id="cardNumber"
-            className="w-full rounded-md p-3"
+            placeholder="Enter card number"
+            className="w-full rounded-md p-3 outline-0 hover:outline-0 placeholder:italic placeholder:text-lg md:text-lg text-md italic text-blue-900 hover:cursor-not-allowed cursor-not-allowed"
+            value={756823451234}
           />
         </article>
         <article>
           <label
             htmlFor="expiryDate"
-            className="block text-white dark:text-gray-200 mt-2 mb-2 text-lg italic font-semibold"
+            className="block text-white dark:text-gray-200 mt-2 mb-2 text-lg italic font-semibold "
           >
             Expiry Date
           </label>
-          <article className="flex gap-4">
+          <article className="flex gap-4 outline-0 hover:outline-0">
             <input
-              placeholder="Month"
-              type="number"
+              placeholder="Enter month"
+              type="text"
               name="month"
               id="expiryDate"
-              className="w-1/2 rounded-md px-4 py-3"
+              value={"September"}
+              className="w-1/2 rounded-md px-4 py-3 outline-0 hover:outline-0 placeholder:italic placeholder:text-lg md:text-lg text-md italic hover:cursor-not-allowed"
             />
             <input
-              placeholder="Year"
+              placeholder="Enter year"
               type="number"
               name="year"
               id="expiryDate"
-              className="w-1/2 rounded-md p-3"
+              value={2027}
+              className="w-1/2 rounded-md p-3 outline-0 hover:outline-0 placeholder:italic placeholder:text-lg md:text-lg text-md italic text-blue-900 hover:cursor-not-allowed cursor-not-allowed"
             />
           </article>
         </article>
@@ -95,11 +103,13 @@ export const CheckOut = ({ setCheckOut }) => {
             type="number"
             name="securityCode"
             id="securityCode"
-            className="w-full rounded-md p-3"
+            placeholder="Enter security code"
+            className="w-full rounded-md p-3 outline-0 hover:outline-0 placeholder:italic placeholder:text-lg text-slate-900 italic md:text-lg text-md hover:cursor-not-allowed"
+            value={574}
           />
         </article>
-        <p className="text-white dark:text-gray-200 text-xl text-center m-4 font-bold ">
-          {total}$
+        <p className="text-white dark:text-gray-200 text-xl md:text-3xl text-center m-8 font-bold italic  ">
+          Total : {total}$
         </p>
         <article className="w-full">
           <button className="block w-full dark:text-gray-200 dark:bg-slate-800 p-3 rounded-lg text-sm  md:text-lg italic font-bold hover:cursor-pointer bg-blue-800 text-white ">
