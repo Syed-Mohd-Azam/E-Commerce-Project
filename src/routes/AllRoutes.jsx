@@ -8,6 +8,7 @@ import {
   ProductsList,
   Register,
   CheckOut,
+  OrderPage,
 } from "../pages";
 import { FilterBar } from "../pages/Products/components/FilterBar";
 import { ProtectedRoute } from "./ProtectedRoute";
@@ -28,6 +29,14 @@ const AllRoutes = () => {
           element={
             <ProtectedRoute>
               <CartPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="order-summary"
+          element={
+            <ProtectedRoute>
+              <OrderPage />
             </ProtectedRoute>
           }
         />

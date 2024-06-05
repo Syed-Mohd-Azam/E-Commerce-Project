@@ -244,6 +244,12 @@
       "password": "$2a$10$LFb8pOLZI0FLu8l1aWzkbOL7ribld13yI/S2ZQAS/qRYOEktgft0i",
       "name": "Syed Mohd Azam",
       "id": 1
+    },
+    {
+      "email": "suhail@gmail.com",
+      "password": "$2a$10$fQSa3pidnsNPnWD1xIw12u7cB5nlxbJwO69inK1iHMm6C32Uhj7z2",
+      "name": "Suhail",
+      "id": 2
     }
   ]
 }
