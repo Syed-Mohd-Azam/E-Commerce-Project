@@ -47,7 +47,7 @@ export const CheckOut = ({ setCheckOut }) => {
     const data = await response.json();
     console.log(data);
     clearCart();
-    navigate("/order-summary");
+    navigate("/order-summary", { state: { status: true } });
   };
   return (
     <>

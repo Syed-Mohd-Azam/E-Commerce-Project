@@ -1,11 +1,12 @@
+import { useLocation } from "react-router-dom";
 import { OrderFailure } from "./components/OrderFailure";
 import { OrderSuccess } from "./components/OrderSuccess";
 export const OrderPage = () => {
-  const status = true;
+  const { state } = useLocation();
   return (
     <>
       <section className="flex-1">
-        {status ? <OrderSuccess /> : <OrderFailure />}
+        {state?.status ? <OrderSuccess /> : <OrderFailure />}
       </section>
     </>
   );
