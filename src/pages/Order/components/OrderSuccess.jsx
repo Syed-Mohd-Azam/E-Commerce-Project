@@ -1,7 +1,8 @@
+/* eslint-disable react/prop-types */
 import { AiOutlineCheckCircle } from "react-icons/ai";
 import { LuShoppingCart } from "react-icons/lu";
 import { Link } from "react-router-dom";
-export const OrderSuccess = () => {
+export const OrderSuccess = ({ data }) => {
   return (
     <>
       <section className="flex-1 w-full md:w-4/5 mx-auto p-6 flex justify-center items-center">
@@ -13,13 +14,13 @@ export const OrderSuccess = () => {
             </span>
           </p>
           <p className="text-center text-sm md:text-xl py-3 font-semibold italic text-blue-600 dark:text-gray-200">
-            Thank you user name for order!
+            Thank you {data?.user?.name} for order!
           </p>
           <p className="text-center text-sm md:text-xl text-blue-600 italic font-semibold dark:text-gray-200">
-            Your order Id is : orderId.
+            Your order Id is : {data?.user?.customerId}!
           </p>
           <p className="text-center text-sm md:text-xl py-2 text-blue-600 italic font-semibold dark:text-gray-200">
-            Please check confirmation mail.
+            Please check confirmation mail on {data?.user?.email}!
           </p>
           <p className="text-center text-sm md:text-xl py-2 text-blue-600 italic font-semibold dark:text-gray-200">
             Payment Id : xyz_123456789...

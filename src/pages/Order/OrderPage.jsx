@@ -6,7 +6,7 @@ export const OrderPage = () => {
   return (
     <>
       <section className="flex-1">
-        {state?.status ? <OrderSuccess /> : <OrderFailure />}
+        {state?.status ? <OrderSuccess data={state?.data} /> : <OrderFailure />}
       </section>
     </>
   );
