@@ -1,5 +1,6 @@
 import { AiOutlineCheckCircle } from "react-icons/ai";
 import { LuShoppingCart } from "react-icons/lu";
+import { Link } from "react-router-dom";
 export const OrderSuccess = () => {
   return (
     <>
@@ -24,12 +25,14 @@ export const OrderSuccess = () => {
             Payment Id : xyz_123456789...
           </p>
           <article className="py-3">
-            <button className=" flex flex-row gap-2 justify-center  items-center mx-auto font-semibold bg-blue-600 p-2 rounded-md text-white italic">
-              <span className="inline"> Continue Shopping</span>
-              <span className="inline">
-                <LuShoppingCart />
-              </span>
-            </button>
+            <Link to="/products">
+              <button className=" flex flex-row gap-2 justify-center  items-center mx-auto font-semibold bg-blue-600 p-2 rounded-md text-white italic">
+                <span className="inline"> Continue Shopping</span>
+                <span className="inline">
+                  <LuShoppingCart />
+                </span>
+              </button>
+            </Link>
           </article>
         </article>
       </section>
