@@ -13,6 +13,7 @@ import {
 import { FilterBar } from "../pages/Products/components/FilterBar";
 import { ProtectedRoute } from "./ProtectedRoute";
 import { OrderSuccess } from "../pages/Order/components/OrderSuccess";
+import { OrderFailure } from "../pages/Order/components/OrderFailure";
 const AllRoutes = () => {
   return (
     <>
@@ -26,6 +27,7 @@ const AllRoutes = () => {
         <Route path="login" element={<Login />} />
         <Route path="paymentInfo" element={<CheckOut />} />
         <Route path="order-success" element={<OrderSuccess />} />
+        <Route path="order-failure" element={<OrderFailure />} />
         <Route
           path="cart"
           element={
