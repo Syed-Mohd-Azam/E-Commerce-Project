@@ -28,7 +28,6 @@ export const CheckOut = ({ setCheckOut }) => {
     };
     try {
       const data = await createOrder(cartList, total, userData);
-      console.log("data", data);
       if (data?.id) {
         clearCart();
         navigate("/order-summary", { state: { data: data, status: true } });
