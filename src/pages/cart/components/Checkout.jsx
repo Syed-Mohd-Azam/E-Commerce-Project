@@ -1,54 +1,40 @@
 import { IoMdClose } from "react-icons/io";
 import { useCartContext } from "../../../contexts";
 import { Link, useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
-import { getTokenDetails } from "../../../services";
+import { useEffect, useRef, useState } from "react";
+import { createOrder, getUser } from "../../../services";
+import { toast } from "react-toastify";
 // eslint-disable-next-line react/prop-types
 export const CheckOut = ({ setCheckOut }) => {
   const { cartList, total, clearCart } = useCartContext();
+  const nameRef = useRef();
+  const emailRef = useRef();
   const navigate = useNavigate();
   const [user, setUser] = useState({});
-  const { token, cbid } = getTokenDetails();
+  console.log(user);
   useEffect(() => {
-    async function getUser() {
-      const response = await fetch(`http://localhost:8000/600/users/${cbid}`, {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-      });
-      const jsonData = await response.json();
-      console.log(jsonData);
-      setUser(jsonData);
+    async function fetchUser() {
+      const userDetails = await getUser();
+      userDetails?.email ? setUser(userDetails) : toast.error(userDetails);
     }
-    getUser();
+    fetchUser();
   }, []);
   const handleOrderSubmit = async (event) => {
     event.preventDefault();
-    const order = {
-      cartList: cartList,
-      amount: total,
-      itemsQuantity: cartList.length,
-      user: {
-        name: user.name,
-        email: user.email,
-        customerId: user.id,
-      },
+    const userData = {
+      name: nameRef?.current?.value,
+      email: emailRef?.current?.value,
+      customerId: user?.id,
     };
     try {
-      const response = await fetch(`http://localhost:8000/660/orders`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify(order),
-      });
-      const data = await response.json();
-      console.log(data);
-      clearCart();
-      navigate("/order-summary", { state: { data: data, status: true } });
+      const data = await createOrder(cartList, total, userData);
+      console.log("data", data);
+      if (data?.id) {
+        clearCart();
+        navigate("/order-summary", { state: { data: data, status: true } });
+      } else {
+        navigate("/order-summary", { state: { status: false } });
+      }
     } catch (error) {
       navigate("/order-summary", { state: { status: false } });
     }
@@ -80,6 +66,7 @@ export const CheckOut = ({ setCheckOut }) => {
               name="name"
               id="name"
               placeholder="Enter name"
+              ref={nameRef}
               value={user?.name || ""}
               required={true}
               className="w-full rounded-md p-3 placeholder:italic placeholder:text-lg outline-0 hover:outline-0"
@@ -97,7 +84,8 @@ export const CheckOut = ({ setCheckOut }) => {
               name="email"
               placeholder="example@gmail.com"
               id="email"
-              value={user?.email || ""}
+              ref={emailRef}
+              value={user?.email}
               required={true}
               className="w-full rounded-md p-3 placeholder:italic placeholder:text-lg outline-0 hover:outline-0"
             />
@@ -164,7 +152,10 @@ export const CheckOut = ({ setCheckOut }) => {
             Total : {total}$
           </p>
           <article className="w-full">
-            <button className="block w-full dark:text-gray-200 dark:bg-slate-800 p-3 rounded-lg text-sm  md:text-lg italic font-bold hover:cursor-pointer bg-blue-800 text-white ">
+            <button
+              type="submit"
+              className="block w-full dark:text-gray-200 dark:bg-slate-800 p-3 rounded-lg text-sm  md:text-lg italic font-bold hover:cursor-pointer bg-blue-800 text-white "
+            >
               Proceed to Payment
             </button>
           </article>

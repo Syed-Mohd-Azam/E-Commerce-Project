@@ -237,7 +237,244 @@
       "best_seller": true
     }
   ],
-  "orders": [],
+  "orders": [
+    {
+      "cartList": [],
+      "amount": 0,
+      "itemsQuantity": 0,
+      "user": {
+        "name": "Azam Khan",
+        "email": "azamkhan@gmail.com",
+        "customerId": 7
+      },
+      "id": 1
+    },
+    {
+      "cartList": [
+        {
+          "id": "10004",
+          "name": "The Complete Guide to Backend Development",
+          "overview": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error unde quisquam magni vel eligendi nam.",
+          "long_description": " The Complete Guide to Backend Development is a comprehensive resource covering database management, server architecture, API design, authentication, and deployment. It's suitable for developers of all levels, offering practical insights and best practices for building scalable backend systems.",
+          "price": "99",
+          "poster": "https://images.unsplash.com/photo-1595617795501-9661aafda72a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=650&q=40",
+          "image_local": "/images/10004.avif",
+          "rating": 5,
+          "in_stock": true,
+          "size": 7,
+          "best_seller": true
+        },
+        {
+          "id": "10002",
+          "name": "Django Framework for Beginners",
+          "overview": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error unde quisquam magni vel eligendi nam.",
+          "long_description": "Django is a Python web framework known for its rapid development and clean design. It includes features like an ORM, templating engine, and user authentication, making it beginner-friendly yet powerful for building web applications. ",
+          "price": "19",
+          "poster": "https://images.unsplash.com/photo-1580894894513-541e068a3e2b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=650&q=40",
+          "image_local": "/images/10002.avif",
+          "rating": 5,
+          "in_stock": true,
+          "size": 2,
+          "best_seller": false
+        },
+        {
+          "id": "10007",
+          "name": "Master the Code Review",
+          "overview": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error unde quisquam magni vel eligendi nam.",
+          "long_description": "Master the Code Review is a concise guide focused on improving your code review skills. It covers best practices for providing constructive feedback, identifying bugs, and ensuring code quality. With practical tips and examples, this resource helps developers enhance collaboration, efficiency, and codebase reliability through effective code reviews. ",
+          "price": "19",
+          "poster": "https://images.unsplash.com/photo-1621839673705-6617adf9e890?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=650&q=40",
+          "image_local": "/images/10007.avif",
+          "rating": 5,
+          "in_stock": true,
+          "size": 2,
+          "best_seller": false
+        }
+      ],
+      "amount": 137,
+      "itemsQuantity": 3,
+      "user": {
+        "name": "Azam Khan",
+        "email": "azamkhan@gmail.com",
+        "customerId": 7
+      },
+      "id": 2
+    },
+    {
+      "cartList": [
+        {
+          "id": "10004",
+          "name": "The Complete Guide to Backend Development",
+          "overview": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error unde quisquam magni vel eligendi nam.",
+          "long_description": " The Complete Guide to Backend Development is a comprehensive resource covering database management, server architecture, API design, authentication, and deployment. It's suitable for developers of all levels, offering practical insights and best practices for building scalable backend systems.",
+          "price": "99",
+          "poster": "https://images.unsplash.com/photo-1595617795501-9661aafda72a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=650&q=40",
+          "image_local": "/images/10004.avif",
+          "rating": 5,
+          "in_stock": true,
+          "size": 7,
+          "best_seller": true
+        },
+        {
+          "id": "10006",
+          "name": "Frontend Fastlane Plan With Projects",
+          "overview": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error unde quisquam magni vel eligendi nam.",
+          "long_description": "Frontend Fastlane Plan With Projects offers a streamlined path to mastering frontend development. It provides a clear roadmap for learning HTML, CSS, JavaScript, and frameworks like React or Vue.js. With practical projects included, it accelerates skill development for aspiring frontend developers.",
+          "price": "99",
+          "poster": "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=650&q=40",
+          "image_local": "/images/10006.avif",
+          "rating": 5,
+          "in_stock": true,
+          "size": 10,
+          "best_seller": false
+        }
+      ],
+      "amount": 198,
+      "itemsQuantity": 2,
+      "user": {
+        "name": "Azam Khan",
+        "email": "azamkhan@gmail.com",
+        "customerId": 7
+      },
+      "id": 3
+    },
+    {
+      "cartList": [
+        {
+          "id": "10011",
+          "name": "Web Development Foundation",
+          "overview": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error unde quisquam magni vel eligendi nam.",
+          "long_description": "Web Development Foundation offers a beginner-friendly introduction to essential web development concepts like HTML, CSS, JavaScript, and basic backend principles. Through practical examples, it provides a solid starting point for aspiring web developers.",
+          "price": "29",
+          "poster": "https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=650&q=40",
+          "image_local": "/images/10011.avif",
+          "rating": 5,
+          "in_stock": true,
+          "size": 3,
+          "best_seller": true
+        }
+      ],
+      "amount": 29,
+      "itemsQuantity": 1,
+      "user": {
+        "name": "Azam Khan",
+        "email": "azamkhan@gmail.com",
+        "customerId": 7
+      },
+      "id": 4
+    },
+    {
+      "cartList": [],
+      "amount": 0,
+      "itemsQuantity": 0,
+      "user": {
+        "name": "Azam Khan",
+        "email": "azamkhan@gmail.com",
+        "customerId": 7
+      },
+      "id": 5
+    },
+    {
+      "cartList": [
+        {
+          "id": "10002",
+          "name": "Django Framework for Beginners",
+          "overview": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error unde quisquam magni vel eligendi nam.",
+          "long_description": "Django is a Python web framework known for its rapid development and clean design. It includes features like an ORM, templating engine, and user authentication, making it beginner-friendly yet powerful for building web applications. ",
+          "price": "19",
+          "poster": "https://images.unsplash.com/photo-1580894894513-541e068a3e2b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=650&q=40",
+          "image_local": "/images/10002.avif",
+          "rating": 5,
+          "in_stock": true,
+          "size": 2,
+          "best_seller": false
+        }
+      ],
+      "amount": 19,
+      "itemsQuantity": 1,
+      "user": {
+        "name": "Azam Khan",
+        "email": "azamkhan@gmail.com",
+        "customerId": 7
+      },
+      "id": 6
+    },
+    {
+      "cartList": [
+        {
+          "id": "10002",
+          "name": "Django Framework for Beginners",
+          "overview": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error unde quisquam magni vel eligendi nam.",
+          "long_description": "Django is a Python web framework known for its rapid development and clean design. It includes features like an ORM, templating engine, and user authentication, making it beginner-friendly yet powerful for building web applications. ",
+          "price": "19",
+          "poster": "https://images.unsplash.com/photo-1580894894513-541e068a3e2b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=650&q=40",
+          "image_local": "/images/10002.avif",
+          "rating": 5,
+          "in_stock": true,
+          "size": 2,
+          "best_seller": false
+        }
+      ],
+      "amount": 19,
+      "itemsQuantity": 1,
+      "user": {
+        "name": "Azam Khan",
+        "email": "azamkhan@gmail.com",
+        "customerId": 7
+      },
+      "id": 7
+    },
+    {
+      "cartList": [
+        {
+          "id": "10007",
+          "name": "Master the Code Review",
+          "overview": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error unde quisquam magni vel eligendi nam.",
+          "long_description": "Master the Code Review is a concise guide focused on improving your code review skills. It covers best practices for providing constructive feedback, identifying bugs, and ensuring code quality. With practical tips and examples, this resource helps developers enhance collaboration, efficiency, and codebase reliability through effective code reviews. ",
+          "price": "19",
+          "poster": "https://images.unsplash.com/photo-1621839673705-6617adf9e890?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=650&q=40",
+          "image_local": "/images/10007.avif",
+          "rating": 5,
+          "in_stock": true,
+          "size": 2,
+          "best_seller": false
+        }
+      ],
+      "amount": 19,
+      "itemsQuantity": 1,
+      "user": {
+        "name": "Azam Khan",
+        "email": "azamkhan@gmail.com",
+        "customerId": 7
+      },
+      "id": 8
+    },
+    {
+      "cartList": [
+        {
+          "id": "10003",
+          "name": "The Future of Design Systems",
+          "overview": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error unde quisquam magni vel eligendi nam.",
+          "long_description": "Design systems are set to become more integral in product development, offering dynamic, AI-driven, and collaborative solutions. Expect streamlined processes, enhanced accessibility, and a focus on consistency and innovation as design systems evolve further.",
+          "price": "29",
+          "poster": "https://images.unsplash.com/photo-1523726491678-bf852e717f6a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=650&q=40",
+          "image_local": "/images/10003.avif",
+          "rating": 3,
+          "in_stock": true,
+          "size": 1,
+          "best_seller": false
+        }
+      ],
+      "amount": 29,
+      "itemsQuantity": 1,
+      "user": {
+        "name": "Azam Khan",
+        "email": "azamkhan@gmail.com",
+        "customerId": 7
+      },
+      "id": 9
+    }
+  ],
   "users": [
     {
       "email": "smazamamu@gmail.com",
@@ -274,6 +511,12 @@
       "password": "$2a$10$u77hMEzvfxpY6H2.eGxITezvjkQXq3ijZS/3qiwFaY9dRrLmH8msO",
       "name": "Syed Mohd Anas",
       "id": 6
+    },
+    {
+      "email": "azamkhan@gmail.com",
+      "password": "$2a$10$YFSmM8aEsRV20M2O0lcbRu13IBZeU1/TSM72YtLbaxrEqaSmT3Njq",
+      "name": "Azam Khan",
+      "id": 7
     }
   ]
 }

@@ -14,16 +14,30 @@ export const OrderSuccess = ({ data }) => {
             </span>
           </p>
           <p className="text-center text-sm md:text-xl py-3 font-semibold italic text-blue-600 dark:text-gray-200">
-            Thank you {data?.user?.name} for order!
+            Thank you{" "}
+            <span className="text-green-500 dark:text-pink-500">
+              {data?.user?.name}
+            </span>{" "}
+            for order!
           </p>
-          <p className="text-center text-sm md:text-xl text-blue-600 italic font-semibold dark:text-gray-200">
-            Your order Id is : {data?.user?.customerId}!
+          <p className="text-center text-sm md:text-xl text-blue-600 italic font-semibold dark:text-gray-200 ">
+            Your order Id is :{" "}
+            <span className="text-green-500 dark:text-pink-500">
+              {" "}
+              {data?.user?.customerId}!
+            </span>
           </p>
           <p className="text-center text-sm md:text-xl py-2 text-blue-600 italic font-semibold dark:text-gray-200">
-            Please check confirmation mail on {data?.user?.email}!
+            Please check confirmation mail on{" "}
+            <span className="text-green-500 dark:text-pink-500">
+              {data?.user?.email}!
+            </span>
           </p>
           <p className="text-center text-sm md:text-xl py-2 text-blue-600 italic font-semibold dark:text-gray-200">
-            Payment Id : xyz_123456789...
+            Payment Id :{" "}
+            <span className="text-green-500 dark:text-pink-500">
+              xyz_123456789...
+            </span>
           </p>
           <article className="py-3">
             <Link to="/products">
