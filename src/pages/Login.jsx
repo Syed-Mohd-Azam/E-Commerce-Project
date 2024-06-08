@@ -15,6 +15,7 @@ export const Login = () => {
     try {
       const data = await login(loginDetails);
       if (data?.accessToken) {
+        toast.success("Login successful!");
         navigate("/");
       } else {
         toast.error(data);
