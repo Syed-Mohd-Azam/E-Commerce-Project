@@ -20,10 +20,10 @@ export async function login(loginDetails) {
   console.log(response);
   if (!response.ok) {
     const data = await response.json();
-    setTokenDetails(data);
     return data;
   }
   const data = await response.json();
+  setTokenDetails(data);
   return data;
 }
 
@@ -42,5 +42,6 @@ export async function register(registerDetails) {
     return data;
   }
   const data = await response.json();
+  setTokenDetails(data);
   return data;
 }
