@@ -17,13 +17,19 @@ export const Register = () => {
     try {
       const data = await register(authDetail);
       if (data?.accessToken) {
-        toast.success("Registeration successful!");
+        toast.success("Registeration successful!", {
+          closeButton: true,
+          position: "bottom-center",
+        });
         navigate("/");
       }
       toast.error(data);
     } catch (error) {
       console.error("Error:", error);
-      toast.error(error.message || "Registration failed. Please try again.");
+      toast.error(error.message || "Registration failed. Please try again.", {
+        closeButton: true,
+        position: "bottom-center",
+      });
     }
   };
   return (
