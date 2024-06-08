@@ -45,3 +45,8 @@ export async function register(registerDetails) {
   setTokenDetails(data);
   return data;
 }
+
+export function logout() {
+  sessionStorage.removeItem("token");
+  sessionStorage.removeItem("cbid");
+}

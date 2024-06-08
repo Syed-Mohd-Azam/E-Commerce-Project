@@ -11,7 +11,7 @@ export const CheckOut = ({ setCheckOut }) => {
   const { token, cbid } = getTokenDetails();
   useEffect(() => {
     async function getUser() {
-      const response = await fetch(`http://localhost:8000/660/users/${cbid}`, {
+      const response = await fetch(`http://localhost:8000/600/users/${cbid}`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
