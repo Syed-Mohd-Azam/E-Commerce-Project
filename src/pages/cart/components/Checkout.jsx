@@ -2,13 +2,13 @@ import { IoMdClose } from "react-icons/io";
 import { useCartContext } from "../../../contexts";
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { getTokenDetails } from "../../../services";
 // eslint-disable-next-line react/prop-types
 export const CheckOut = ({ setCheckOut }) => {
   const { cartList, total, clearCart } = useCartContext();
   const navigate = useNavigate();
   const [user, setUser] = useState({});
-  const token = JSON.parse(sessionStorage.getItem("token"));
-  const cbid = JSON.parse(sessionStorage.getItem("cbid"));
+  const { token, cbid } = getTokenDetails();
   useEffect(() => {
     async function getUser() {
       const response = await fetch(`http://localhost:8000/600/users/${cbid}`, {
