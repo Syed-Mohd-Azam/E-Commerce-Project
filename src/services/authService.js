@@ -10,10 +10,8 @@ export async function login(loginDetails) {
   console.log(response);
   if (!response.ok) {
     const data = await response.json();
-    console.log(data);
     return data;
   }
   const data = await response.json();
-  console.log(data);
   return data;
 }
