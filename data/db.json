@@ -256,6 +256,18 @@
       "password": "$2a$10$XzWapZNRZirQfmVDu4PP2eRzUdKgHmCpFyuMFWVuAHbZzOLYKV3hy",
       "name": "Hasan",
       "id": 3
+    },
+    {
+      "email": "syedmohdali@gmail.com",
+      "password": "$2a$10$bXAKVFfOFN4qkMo6xLf4EOqAdbtnMh3vjd12BTzK.WEBSYX2j2226",
+      "name": "Syed Mohd Ali",
+      "id": 4
+    },
+    {
+      "email": "syedmohdhussein@gmail.com",
+      "password": "$2a$10$TulX8TG/cUao55uZeY8y8.fEFhFv/hbRPvtgIPPzl1e5y7GYquQZa",
+      "name": "Syed Mohd Hussein",
+      "id": 5
     }
   ]
 }

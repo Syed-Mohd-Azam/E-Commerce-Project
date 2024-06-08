@@ -1,36 +1,26 @@
+import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { register } from "../services";
 export const Register = () => {
+  const nameRef = useRef();
+  const emailRef = useRef();
+  const passwordRef = useRef();
   const navigate = useNavigate();
   const handleRegister = async (event) => {
     event.preventDefault();
     const authDetail = {
-      name: event.target.name.value,
-      email: event.target.email.value,
-      password: event.target.password.value,
-    };
-    const optionsRequest = {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        // Add any other headers your API might require, such as authentication tokens
-      },
-      body: JSON.stringify(authDetail),
+      name: nameRef.current.value,
+      email: emailRef.current.value,
+      password: passwordRef.current.value,
     };
     try {
-      const response = await fetch(
-        "http://localhost:8000/register",
-        optionsRequest
-      );
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.message || "Failed to register");
+      const data = await register(authDetail);
+      if (data?.accessToken) {
+        toast.success("Registeration successful!");
+        navigate("/");
       }
-
-      const jsonData = await response.json();
-      console.log(jsonData);
-      toast.success("Registration successful!");
-      navigate("/products");
+      toast.error(data);
     } catch (error) {
       console.error("Error:", error);
       toast.error(error.message || "Registration failed. Please try again.");
@@ -49,6 +39,7 @@ export const Register = () => {
               type="text"
               id="name"
               required
+              ref={nameRef}
               placeholder="Enter name please!"
               autoComplete="off"
               className="placeholder:text-white dark:placeholder:text-slate-900 text-sm md:text-lg block dark:bg-slate-200 rounded-md bg-blue-900 text-slate-200 dark:text-slate-900 italic py-2 px-2 font-semibold"
@@ -64,6 +55,7 @@ export const Register = () => {
             <input
               type="email"
               id="email"
+              ref={emailRef}
               required
               placeholder="Enter  email please!"
               autoComplete="off"
@@ -77,6 +69,7 @@ export const Register = () => {
             <input
               type="password"
               id="password"
+              ref={passwordRef}
               required
               autoComplete="off"
               placeholder="Make strong password!"

@@ -15,3 +15,21 @@ export async function login(loginDetails) {
   const data = await response.json();
   return data;
 }
+
+export async function register(registerDetails) {
+  const options = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(registerDetails),
+  };
+  const response = await fetch("http://localhost:8000/register", options);
+  console.log(response);
+  if (!response.ok) {
+    const data = await response.json();
+    return data;
+  }
+  const data = await response.json();
+  return data;
+}

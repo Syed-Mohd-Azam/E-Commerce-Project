@@ -65,7 +65,10 @@ export const Login = () => {
             />
           </div>
           <div className="my-10 mx-4 text-left">
-            <button className=" text-sm md:text-lg dark:hover:bg-blue-900 dark:hover:text-slate-200 p-2 px-3 rounded-md dark:bg-blue-800 dark:text-gray-200 bg-blue-500 text-white hover:scale-110">
+            <button
+              type="submit"
+              className=" text-sm md:text-lg dark:hover:bg-blue-900 dark:hover:text-slate-200 p-2 px-3 rounded-md dark:bg-blue-800 dark:text-gray-200 bg-blue-500 text-white hover:scale-110"
+            >
               Login as User
             </button>
           </div>
