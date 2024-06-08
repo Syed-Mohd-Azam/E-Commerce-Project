@@ -250,6 +250,12 @@
       "password": "$2a$10$fQSa3pidnsNPnWD1xIw12u7cB5nlxbJwO69inK1iHMm6C32Uhj7z2",
       "name": "Suhail",
       "id": 2
+    },
+    {
+      "email": "hasan@gmail.com",
+      "password": "$2a$10$XzWapZNRZirQfmVDu4PP2eRzUdKgHmCpFyuMFWVuAHbZzOLYKV3hy",
+      "name": "Hasan",
+      "id": 3
     }
   ]
 }

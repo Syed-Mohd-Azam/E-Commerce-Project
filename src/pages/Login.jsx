@@ -1,9 +1,36 @@
+import { useRef } from "react";
+import { login } from "../services";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 export const Login = () => {
+  const navigate = useNavigate();
+  const emailRef = useRef();
+  const passwordRef = useRef();
+  const handleLogin = async (event) => {
+    event.preventDefault();
+    const loginDetails = {
+      email: emailRef.current.value,
+      password: passwordRef.current.value,
+    };
+    try {
+      const data = await login(loginDetails);
+      if (data?.accessToken) {
+        navigate("/");
+      } else {
+        toast.error(data);
+      }
+    } catch (error) {
+      toast.error(error.message, {
+        closeButton: true,
+        position: "bottom-center",
+      });
+    }
+  };
   return (
     <>
       <section className="flex-1 w-4/5 mx-auto  text-center italic font-bold text-2xl text-blue-900 dark:text-slate-200 py-5 ">
         <p>LOGIN</p>
-        <form>
+        <form onSubmit={handleLogin}>
           <div className="m-4 flex flex-col">
             <label
               htmlFor="email"
@@ -13,6 +40,8 @@ export const Login = () => {
             </label>
             <input
               type="email"
+              ref={emailRef}
+              value={emailRef?.current?.value}
               required
               placeholder="Enter  email please!"
               autoComplete="off"
@@ -27,6 +56,8 @@ export const Login = () => {
               type="password"
               id="password"
               required
+              ref={passwordRef}
+              value={passwordRef?.current?.value}
               autoComplete="off"
               placeholder="Make strong password!"
               className="block text-sm  dark:bg-slate-200 rounded-md italic bg-blue-900 dark:text-blue-900 text-white py-2 px-2 md:text-lg font-semibold placeholder:text-white dark:placeholder:text-slate-900"
