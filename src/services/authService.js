@@ -1,3 +1,13 @@
+function setTokenDetails(data) {
+  console.log(data);
+  sessionStorage.setItem("token", JSON.stringify(data?.accessToken));
+  sessionStorage.setItem("cbid", JSON.stringify(data?.user?.id));
+}
+export function getTokenDetails() {
+  const token = sessionStorage.getItem("token");
+  const cbid = sessionStorage.getItem("cbid");
+  return { token, cbid };
+}
 export async function login(loginDetails) {
   const options = {
     method: "POST",
@@ -10,6 +20,7 @@ export async function login(loginDetails) {
   console.log(response);
   if (!response.ok) {
     const data = await response.json();
+    setTokenDetails(data);
     return data;
   }
   const data = await response.json();
