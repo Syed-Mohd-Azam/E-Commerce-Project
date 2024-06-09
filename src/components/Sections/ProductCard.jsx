@@ -4,9 +4,10 @@ import { Link } from "react-router-dom";
 import { useCartContext } from "../../contexts";
 import { Rating } from "./Rating";
 import { useEffect, useState } from "react";
+import { getTokenDetails } from "../../services";
 // eslint-disable-next-line react/prop-types
 export const ProductCard = ({ product }) => {
-  console.log(product);
+  const { token } = getTokenDetails();
   const { cartList, addToCart } = useCartContext();
   const [presentInCart, setInCart] = useState(false);
   useEffect(() => {
@@ -17,29 +18,34 @@ export const ProductCard = ({ product }) => {
   return (
     <>
       <section className=" h-auto w-4/5 lg:w-[300px]  rounded-xl relative">
-        {!presentInCart && (
-          <Link to="/cart">
-            <button
-              onClick={() => addToCart(product)}
-              className={`absolute top-0 right-0  p-2 bg-green-500 text-white dark:bg-gray-200 dark:text-blue-900 rounded-md italic font-bold hover:scale-110 hover:skew-x-6 ${
-                product?.in_stock ? "cursor-pointer" : "cursor-not-allowed"
-              }`}
-              disabled={!product?.in_stock}
-            >
-              Add to cart
-            </button>
-          </Link>
+        {token && (
+          <article>
+            {!presentInCart && (
+              <Link to="/cart">
+                <button
+                  onClick={() => addToCart(product)}
+                  className={`absolute top-0 right-0  p-2 bg-green-500 text-white dark:bg-gray-200 dark:text-blue-900 rounded-md italic font-bold hover:scale-110 hover:skew-x-6 ${
+                    product?.in_stock ? "cursor-pointer" : "cursor-not-allowed"
+                  }`}
+                  disabled={!product?.in_stock}
+                >
+                  Add to cart
+                </button>
+              </Link>
+            )}
+            {presentInCart && (
+              <Link to="/cart">
+                <button
+                  onClick={() => addToCart(product)}
+                  className=" absolute top-0 right-0  p-2 bg-red-400 text-white dark:bg-red-700 dark:text-slate-200 rounded-md italic font-bold hover:scale-110 hover:skew-x-6"
+                >
+                  Remove from Cart
+                </button>
+              </Link>
+            )}
+          </article>
         )}
-        {presentInCart && (
-          <Link to="/cart">
-            <button
-              onClick={() => addToCart(product)}
-              className=" absolute top-0 right-0  p-2 bg-red-400 text-white dark:bg-red-700 dark:text-slate-200 rounded-md italic font-bold hover:scale-110 hover:skew-x-6"
-            >
-              Remove from Cart
-            </button>
-          </Link>
-        )}
+
         <article className=" w-full  h-[200px]">
           <img
             // eslint-disable-next-line react/prop-types
