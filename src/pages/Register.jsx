@@ -48,7 +48,7 @@ export const Register = () => {
               ref={nameRef}
               placeholder="Enter name please!"
               autoComplete="off"
-              className="placeholder:text-slate-900 tracking-wider dark:placeholder:text-slate-900 text-sm md:text-lg block dark:bg-slate-200 rounded-md border-2 border-blue-700 text-slate-900  dark:text-slate-900 italic py-2 px-2 font-semibold dark:border-none"
+              className="placeholder:text-blue-700 tracking-wider dark:placeholder:text-slate-900 text-sm md:text-lg block dark:bg-slate-200 rounded-md border-2 border-blue-700 text-blue-700  dark:text-slate-900 italic py-2 px-2 font-semibold dark:border-none"
             />
           </div>
           <div className="my-2 flex flex-col">
@@ -65,7 +65,7 @@ export const Register = () => {
               required
               placeholder="Enter  email please!"
               autoComplete="off"
-              className="placeholder:text-slate-900 dark:placeholder:text-slate-900 text-sm md:text-lg block dark:bg-slate-200 rounded-md dark:text-slate-900 text-slate-900  py-2 px-2 font-semibold italic tracking-wider border-2 border-blue-700 dark:border-none"
+              className="placeholder:text-blue-700 dark:placeholder:text-slate-900 text-sm md:text-lg block dark:bg-slate-200 rounded-md dark:text-slate-900 text-blue-700  py-2 px-2 font-semibold italic tracking-wider border-2 border-blue-700 dark:border-none"
             />
           </div>
           <div className="my-2 flex flex-col">
@@ -79,7 +79,7 @@ export const Register = () => {
               required
               autoComplete="off"
               placeholder="Make strong password!"
-              className="placeholder:text-slate-900 dark:placeholder:text-slate-900 text-sm md:text-lg block dark:bg-slate-200 rounded-md italic  dark:text-slate-900 text-slate-900 py-2 px-2 text-md font-semibold tracking-wider border-2 border-blue-700 dark:border-none"
+              className="placeholder:text-blue-700 dark:placeholder:text-slate-900 text-sm md:text-lg block dark:bg-slate-200 rounded-md italic  dark:text-slate-900 text-blue-700 py-2 px-2 text-md font-semibold tracking-wider border-2 border-blue-700 dark:border-none"
             />
           </div>
           <div className="my-10 text-left">

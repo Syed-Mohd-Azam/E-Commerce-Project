@@ -46,7 +46,7 @@ export const Login = () => {
               required
               placeholder="Enter  email please!"
               autoComplete="off"
-              className="block text-sm md:text-lg dark:bg-slate-200 rounded-md dark:text-blue-900 text-white bg-blue-900 py-2 px-2 font-semibold italic placeholder:text-white dark:placeholder:text-slate-900"
+              className="block text-sm md:text-lg dark:bg-slate-200 rounded-md dark:text-blue-900 text-blue-700 border-2 border-blue-700 py-2 px-2 font-semibold italic placeholder:text-blue-700 dark:placeholder:text-slate-900 dark:border-none"
             />
           </div>
           <div className="m-4 flex flex-col">
@@ -61,20 +61,20 @@ export const Login = () => {
               value={passwordRef?.current?.value}
               autoComplete="off"
               placeholder="Make strong password!"
-              className="block text-sm  dark:bg-slate-200 rounded-md italic bg-blue-900 dark:text-blue-900 text-white py-2 px-2 md:text-lg font-semibold placeholder:text-white dark:placeholder:text-slate-900"
+              className="block text-sm  dark:bg-slate-200 rounded-md italic  dark:text-blue-900 text-blue-700 py-2 px-2 md:text-lg font-semibold  dark:placeholder:text-slate-900 border-2 border-blue-700 placeholder:text-blue-700 dark:border-none"
             />
           </div>
           <div className="my-10 mx-4 text-left">
             <button
               type="submit"
-              className=" text-sm md:text-lg dark:hover:bg-blue-900 dark:hover:text-slate-200 p-2 px-3 rounded-md dark:bg-blue-800 dark:text-gray-200 bg-blue-500 text-white hover:scale-110"
+              className=" text-sm md:text-lg dark:hover:bg-blue-900 dark:hover:text-slate-200 p-2 px-3 rounded-md dark:bg-blue-800 dark:text-gray-200  text-blue-700 border-2 border-blue-700 hover:scale-110 dark:border-none"
             >
               Login as User
             </button>
           </div>
         </form>
         <div className="text-right px-2 mx-2">
-          <button className=" text-sm md:text-lg dark:hover:bg-blue-700 dark:hover:text-slate-200 p-2 px-3 rounded-md dark:bg-blue-800 dark:text-gray-200 bg-blue-500 text-white hover:scale-110">
+          <button className=" text-sm md:text-lg dark:hover:bg-blue-700 dark:hover:text-slate-200 p-2 px-3 rounded-md dark:bg-blue-800 dark:text-gray-200 border-2 border-blue-700  text-blue-700 hover:scale-110 dark:border-none">
             Login as Guest
           </button>
         </div>
