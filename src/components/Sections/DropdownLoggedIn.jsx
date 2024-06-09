@@ -1,6 +1,18 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { logout } from "../../services";
+import { useCartContext } from "../../contexts";
+import { toast } from "react-toastify";
 // eslint-disable-next-line react/prop-types
 const DropdownLoggedIn = ({ setDropDown }) => {
+  const { clearCart } = useCartContext();
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    logout();
+    setDropDown(false);
+    clearCart();
+    navigate("/");
+    toast.success("Logout Successfully");
+  };
   return (
     <>
       <section className="absolute top-12 right-4 w-20  sm:w-32 text-left bg-blue-500 text-white dark:text-blue-900 dark:bg-gray-200 font-normal  z-10 rounded-md italic sm:text-lg text-xs">
@@ -23,14 +35,11 @@ const DropdownLoggedIn = ({ setDropDown }) => {
               Dashboard
             </Link>
           </li>
-          <li>
-            <Link
-              to="/logout"
-              onClick={() => setDropDown(false)}
-              className="block px-2 py-1 hover:cursor-pointer hover:bg-gray-200 hover:text-sky-900 hover:rounded-b-md font-medium dark:hover:bg-black dark:hover:text-gray-200"
-            >
-              Logout
-            </Link>
+          <li
+            className="block px-2 py-1 hover:cursor-pointer hover:bg-gray-200 hover:text-sky-900 hover:rounded-b-md font-medium dark:hover:bg-black dark:hover:text-gray-200"
+            onClick={handleLogout}
+          >
+            Logout
           </li>
         </ul>
       </section>

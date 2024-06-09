@@ -7,8 +7,10 @@ import Logo from "/images/Logo.png";
 import { useState, useEffect } from "react";
 import { Search } from "../Sections/Search";
 import DropdownLoggedOut from "../Sections/DropdownLoggedOut";
+import DropdownLoggedIn from "../Sections/DropdownLoggedIn";
 // import DropdownLoggedIn from "../Sections/DropdownLoggedIn";
 import { useCartContext } from "../../contexts";
+import { getTokenDetails } from "../../services";
 export const Header = () => {
   const { cartList } = useCartContext();
   const [darkMode, setDarkMode] = useState(
@@ -16,6 +18,8 @@ export const Header = () => {
   );
   const [showSearch, setShowSearch] = useState(false);
   const [dropDown, setDropDown] = useState(false);
+  const { token } = getTokenDetails();
+  console.log(token);
   useEffect(() => {
     localStorage.setItem("darkMode", JSON.stringify(darkMode));
     if (darkMode) {
@@ -60,7 +64,12 @@ export const Header = () => {
                   onClick={() => setDropDown(!dropDown)}
                   className="md:w-6 md:h-6 h-4 w-4 dark:text-gray-200 cursor-pointer"
                 />
-                {dropDown && <DropdownLoggedOut setDropDown={setDropDown} />}
+                {dropDown &&
+                  (token ? (
+                    <DropdownLoggedIn setDropDown={setDropDown} />
+                  ) : (
+                    <DropdownLoggedOut setDropDown={setDropDown} />
+                  ))}
               </div>
             </div>
           </div>
