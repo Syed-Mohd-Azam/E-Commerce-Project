@@ -55,7 +55,7 @@ export const Header = () => {
                 <div className="flex flex-col relative">
                   <FaShoppingCart className="md:w-6 md:h-6 h-4 w-4 dark:text-gray-200 cursor-pointer " />
                   <span className="absolute -right-3 -top-3 bg-red-400 text-white px-1 py-0 font-bold rounded-full text-xs">
-                    {cartList?.length}
+                    {token ? cartList?.length : null}
                   </span>
                 </div>
               </Link>

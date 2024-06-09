@@ -1,14 +1,18 @@
 import { Link, useNavigate } from "react-router-dom";
 import { logout } from "../../services";
 import { toast } from "react-toastify";
+import { useCartContext } from "../../contexts";
+
 // eslint-disable-next-line react/prop-types
 const DropdownLoggedIn = ({ setDropDown }) => {
+  const { clearCart } = useCartContext();
   const navigate = useNavigate();
   const handleLogout = () => {
     logout();
+    clearCart();
     setDropDown(false);
-    navigate("/");
     toast.success("Logout Successfully");
+    navigate("/");
   };
   return (
     <>
