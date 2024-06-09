@@ -19,7 +19,6 @@ export const Header = () => {
   const [showSearch, setShowSearch] = useState(false);
   const [dropDown, setDropDown] = useState(false);
   const { token } = getTokenDetails();
-  console.log(token);
   useEffect(() => {
     localStorage.setItem("darkMode", JSON.stringify(darkMode));
     if (darkMode) {
