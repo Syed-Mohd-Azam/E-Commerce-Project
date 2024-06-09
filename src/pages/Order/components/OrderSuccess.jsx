@@ -24,7 +24,7 @@ export const OrderSuccess = ({ data }) => {
             Your order Id is :{" "}
             <span className="text-green-500 dark:text-pink-500">
               {" "}
-              {data?.id}!
+              {data?.id} !
             </span>
           </p>
           <p className="text-center text-sm md:text-xl py-2 text-blue-600 italic font-semibold dark:text-gray-200">
