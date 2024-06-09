@@ -33,6 +33,10 @@ export async function createOrder(cartList, total, user) {
     body: JSON.stringify(order),
   };
   const response = await fetch("http://localhost:8000/orders", options);
-  const data = await response.json();
-  return data;
+  if (response.ok) {
+    const data = await response.json();
+    return data;
+  } else {
+    return null;
+  }
 }
