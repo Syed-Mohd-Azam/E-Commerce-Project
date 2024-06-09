@@ -4,12 +4,10 @@ import { useCartContext } from "../../contexts";
 import { toast } from "react-toastify";
 // eslint-disable-next-line react/prop-types
 const DropdownLoggedIn = ({ setDropDown }) => {
-  const { clearCart } = useCartContext();
   const navigate = useNavigate();
   const handleLogout = () => {
     logout();
     setDropDown(false);
-    clearCart();
     navigate("/");
     toast.success("Logout Successfully");
   };

@@ -85,7 +85,7 @@ export const Register = () => {
           <div className="my-10 text-left">
             <button
               type="submit"
-              className="text-sm md:text-lg dark:hover:bg-slate-900 dark:hover:text-slate-200 p-2 rounded-md dark:bg-slate-200 dark:text-slate-900 bg-blue-900 text-white hover:scale-110"
+              className="text-sm md:text-lg  py-2 px-3 rounded-md border-2 border-blue-700  dark:bg-blue-900 dark:text-white hover:scale-110 italic"
             >
               Register
             </button>
