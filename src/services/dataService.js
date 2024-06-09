@@ -9,8 +9,10 @@ export async function getUser() {
     },
   };
   const response = await fetch(`http://localhost:8000/users/${cbid}`, options);
+  console.log("response", response);
   if (response.ok) {
     const data = await response.json();
+    console.log("data", data);
     return data;
   }
 

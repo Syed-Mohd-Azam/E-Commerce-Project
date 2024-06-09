@@ -3,7 +3,7 @@ import HeroPicture from "/images/Hero.avif";
 export const Hero = () => {
   return (
     <section className="flex flex-col lg:flex-row items-center lg:justify-between w-full md:w-4/5 mx-auto">
-      <div className="lg:my-28 px-5 mt-10 mb-5">
+      <div className="lg:my-28 px-5 mt-15 mb-5">
         <h1 className="text-5xl font-bold dark:text-slate-100 text-blue-900">
           The Ultimate eBook Store
         </h1>
@@ -20,7 +20,7 @@ export const Hero = () => {
           Explore eBooks
         </Link>
       </div>
-      <div className="visual lg:my-28 px-5 my-5">
+      <div className="visual lg:my-40 px-5 my-5">
         <img
           className="rounded-lg w-full lg:min-w-[300px] lg:max-w-[800px] max-h-full"
           src={HeroPicture}
