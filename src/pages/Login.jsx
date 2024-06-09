@@ -18,12 +18,15 @@ export const Login = () => {
         toast.success("Login successful!");
         navigate("/");
       } else {
-        toast.error(data);
+        toast.error(data, {
+          closeButton: true,
+          position: "bottom-right",
+        });
       }
     } catch (error) {
-      toast.error(error.message, {
+      toast.error("Something went wrong!", {
         closeButton: true,
-        position: "bottom-center",
+        position: "bottom-right",
       });
     }
   };
