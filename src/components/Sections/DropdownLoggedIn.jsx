@@ -25,11 +25,11 @@ const DropdownLoggedIn = ({ setDropDown }) => {
   }, []);
   return (
     <>
-      <section className="absolute top-12 right-4 w-40 sm:w-48 text-left bg-blue-900 text-white dark:text-blue-900 dark:bg-gray-200 font-normal  z-10 rounded-md italic sm:text-lg text-xs">
+      <section className="absolute top-12 right-4 w-36 text-left bg-blue-900 text-white dark:text-blue-900 dark:bg-gray-200 font-normal  z-10 rounded-md italic sm:text-lg text-xs">
         <ul>
           {user?.email && (
             <li
-              className="block px-2 py-1 hover:cursor-pointer text-sm hover:bg-gray-200 hover:text-sky-900 hover:rounded-t-md font-medium dark:hover:bg-black dark:hover:text-gray-200"
+              className="block px-2 py-1 hover:cursor-pointer text-md hover:bg-gray-200 hover:text-sky-900 hover:rounded-t-md font-medium dark:hover:bg-black dark:hover:text-gray-200 overflow-hidden text-ellipsis whitespace-nowrap"
               onClick={() => setDropDown(false)}
             >
               {user?.email}
