@@ -11,7 +11,6 @@ export const CheckOut = ({ setCheckOut }) => {
   const emailRef = useRef();
   const navigate = useNavigate();
   const [user, setUser] = useState({});
-  console.log(user);
   useEffect(() => {
     async function fetchUser() {
       const userDetails = await getUser();

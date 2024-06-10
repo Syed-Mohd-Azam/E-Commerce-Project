@@ -21,7 +21,6 @@ export const FilteredProducts = () => {
     const filteredProducts = json.filter((obj) =>
       obj?.name?.toLowerCase().includes(searchText.toLowerCase())
     );
-    console.log(filteredProducts);
     setProducts(filteredProducts);
   };
   return (

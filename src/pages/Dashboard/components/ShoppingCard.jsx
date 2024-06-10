@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 export const ShoppingCard = ({ cart }) => {
-  console.log("azam", cart);
   return (
     <>
       <section className="mb-8">
