@@ -9,6 +9,7 @@ import {
   Register,
   CheckOut,
   OrderPage,
+  DashboardPage,
 } from "../pages";
 import { FilterBar } from "../pages/Products/components/FilterBar";
 import { ProtectedRoute } from "./ProtectedRoute";
@@ -28,6 +29,7 @@ const AllRoutes = () => {
         <Route path="paymentInfo" element={<CheckOut />} />
         <Route path="order-success" element={<OrderSuccess />} />
         <Route path="order-failure" element={<OrderFailure />} />
+        <Route path="dashboard" element={<DashboardPage />} />
         <Route
           path="cart"
           element={
