@@ -42,3 +42,22 @@ export async function createOrder(cartList, total, user) {
     return null;
   }
 }
+
+export async function getOrders() {
+  const { token, cbid } = getTokenDetails();
+  const options = {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+  };
+  const response = await fetch(
+    `http://localhost:8000/orders?user.customerId=${cbid}`,
+    options
+  );
+  if (response.ok) {
+    const data = await response.json();
+    return data;
+  }
+}

@@ -1,7 +1,13 @@
-export const DashboardCard = () => {
+/* eslint-disable react/prop-types */
+import { OrderCard } from "./OrderCard";
+export const DashboardCard = ({ orders }) => {
   return (
     <>
-      <section>Dashboard Card</section>
+      <section>
+        {orders?.map((order) => (
+          <OrderCard key={order?.id} order={order} />
+        ))}
+      </section>
     </>
   );
 };

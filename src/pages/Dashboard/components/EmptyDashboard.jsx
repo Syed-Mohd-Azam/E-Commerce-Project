@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export const EmptyDashboard = () => {
   return (
     <>
-      <section>
+      <section className="border-2 border-blue-700 dark:border-slate-200">
         <article className="text-center mb-2">
           <BsCart className="inline-block mx-auto text-center text-8xl dark:text-green-600 text-green-400" />
         </article>

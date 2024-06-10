@@ -1,2 +1,2 @@
 export { login, register, getTokenDetails, logout } from "./authService";
-export { getUser, createOrder } from "./dataService";
+export { getUser, createOrder, getOrders } from "./dataService";
