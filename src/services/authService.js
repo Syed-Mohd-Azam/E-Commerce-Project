@@ -1,5 +1,4 @@
 function setTokenDetails(data) {
-  console.log(data);
   sessionStorage.setItem("token", JSON.stringify(data?.accessToken));
   sessionStorage.setItem("cbid", JSON.stringify(data?.user?.id));
 }
@@ -17,7 +16,6 @@ export async function login(loginDetails) {
     body: JSON.stringify(loginDetails),
   };
   const response = await fetch("http://localhost:8000/login", options);
-  console.log(response);
   if (!response.ok) {
     const data = await response.json();
     return data;
@@ -36,7 +34,6 @@ export async function register(registerDetails) {
     body: JSON.stringify(registerDetails),
   };
   const response = await fetch("http://localhost:8000/register", options);
-  console.log(response);
   if (!response.ok) {
     const data = await response.json();
     return data;

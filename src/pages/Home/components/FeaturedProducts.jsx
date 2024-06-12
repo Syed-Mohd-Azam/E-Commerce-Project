@@ -1,16 +1,19 @@
 import { useEffect, useState } from "react";
 import { ProductPage } from "./ProductPage";
+import { featuredProducts } from "../../../services";
 export const FeaturedProducts = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    featuredProducts();
+    async function productsList() {
+      try {
+        const data = await featuredProducts();
+        setProducts(data);
+      } catch (error) {
+        console.log(error.message);
+      }
+    }
+    productsList();
   }, []);
-  const featuredProducts = async () => {
-    const response = await fetch("http://localhost:8000/featured_products");
-    const json = await response.json();
-    console.log(json);
-    setProducts(json);
-  };
   return (
     <>
       <section className="w-full md:w-4/5 mx-auto p-4 lg:p-0">

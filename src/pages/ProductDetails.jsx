@@ -82,7 +82,7 @@ export const ProductDetails = () => {
               </article>
             )}
 
-            <article className="text-md md:text-lg lg:text-xl text-blue-800 font-semibold italic py-4  text-justify dark:text-gray-200 ">
+            <article className="text-md md:text-lg lg:text-xl text-800 font-semibold italic py-4  text-justify dark:text-gray-200 ">
               {productDetails?.long_description}
             </article>
           </article>
