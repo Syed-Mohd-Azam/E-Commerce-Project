@@ -22,7 +22,7 @@ CodeBook is a sophisticated e-commerce platform designed to cater specifically t
 ### Scalable Architecture !
 
 - The project is designed with scalability in mind, allowing for future expansion and handling increased traffic as the e-book store grows.
-### Testing
+### Testing !
 
 - Comprehensive testing is implemented, covering unit tests, integration tests, and end-to-end tests to ensure the robustness and reliability of the application.
 ### Documentation
