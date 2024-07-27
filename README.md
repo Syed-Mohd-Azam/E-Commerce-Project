@@ -4,7 +4,7 @@ CodeBook is a sophisticated e-commerce platform designed to cater specifically t
 
 ## Key Features !
 
-### Authentication and Authorization
+### Authentication and Authorization !
 
 - CodeBook employs JSON-server authentication to ensure secure access to user accounts.
 - Authorization mechanisms are implemented to control user privileges and access to specific features.
