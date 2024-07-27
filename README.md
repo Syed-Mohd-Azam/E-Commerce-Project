@@ -12,7 +12,7 @@ CodeBook is a sophisticated e-commerce platform designed to cater specifically t
 
 - The user interface is crafted with Tailwind CSS, following a mobile-first approach for a responsive and visually appealing design.
 - Tailwind's utility-first approach allows for efficient styling and customization, ensuring a consistent look and feel across the application.
-### Payment Gateway Integration
+### Payment Gateway Integration !
 
 - A secure and reliable payment gateway is seamlessly integrated, allowing users to make purchases with confidence.
 - The payment process is streamlined to provide a smooth checkout experience for customers.
